@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="simple-dita-map">
+    <title>Simplifying DITA</title>
+    <topicref href="simplifying-dita.dita" keys="simplifying-dita"/>
+</map>

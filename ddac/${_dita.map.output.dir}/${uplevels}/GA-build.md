@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><?workdir /home/michael/Documents/ddac/ddac/temp/pdf?><?workdir-uri file:/home/michael/Documents/ddac/ddac/temp/pdf/?><?path2project?><?path2project-uri ./?><?path2rootmap-uri ./?><topic xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/" xmlns:dita-ot="http://dita-ot.sourceforge.net/ns/201007/dita-ot" class="- topic/topic " ditaarch:DITAArchVersion="1.2" domains="(topic hi-d) (topic ut-d) (topic indexing-d) (topic hazard-d) (topic abbrev-d) (topic pr-d) (topic sw-d) (topic ui-d)" id="building-output-with-github-actions" xtrf="file:/home/michael/Documents/ddac/ddac/GA-build.md" xtrc="topic:1;182:3" specializations=""><title class="- topic/title " xtrf="file:/home/michael/Documents/ddac/ddac/GA-build.md" xtrc="title:1;182:3">Building output with GitHub Actions</title><prolog class="- topic/prolog " xtrf="file:/home/michael/Documents/ddac/ddac/GA-build.md" xtrc="prolog:1;182:3"><data class="- topic/data " name="id" value="GA-build" xtrf="file:/home/michael/Documents/ddac/ddac/GA-build.md" xtrc="data:1;182:3"/></prolog><body class="- topic/body " xtrf="file:/home/michael/Documents/ddac/ddac/GA-build.md" xtrc="body:1;182:3"><p class="- topic/p " xtrf="file:/home/michael/Documents/ddac/ddac/GA-build.md" xtrc="p:1;182:3">The following code is a simple GitHub Actions workflow builds GitHub-flavored Markdown files from my MDITA content and deposits them in a branch called <i class="+ topic/ph hi-d/i " xtrf="file:/home/michael/Documents/ddac/ddac/GA-build.md" xtrc="i:1;182:3">docsify</i>. And this all happens every time I push content to the branch where my MDITA content is stored.</p><codeblock class="+ topic/pre pr-d/codeblock " xml:space="preserve" xtrf="file:/home/michael/Documents/ddac/ddac/GA-build.md" xtrc="codeblock:1;182:3">jobs:
+  build-dita:
+    name: Build DITA
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v2
+      - name: Build GFM
+        id: DITA-build
+        uses: jason-fox/dita-build-action@master
+          build: dita -i mymap.ditamap -o out -f markdown_github -v --propertyfile=myprops.properties
+      - name: Upload DITA
+        id: upload
+        uses: actions/upload-artifact@v2
+        with:
+          name: dita-artifact
+          path: ‘out’
+      - name: Deploy
+        id: deploy
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: docsify # The branch the action should deploy to.
+          FOLDER: out # The folder the action should deploy.
+          TARGET-FOLDER: docs          </codeblock><p class="- topic/p " xtrf="file:/home/michael/Documents/ddac/ddac/GA-build.md" xtrc="p:2;182:3">The first job, <codeph class="+ topic/ph pr-d/codeph " xtrf="file:/home/michael/Documents/ddac/ddac/GA-build.md" xtrc="codeph:1;182:3">Git checkout</codeph>, is GitHub-provided action that checks out the branch the <i class="+ topic/ph hi-d/i " xtrf="file:/home/michael/Documents/ddac/ddac/GA-build.md" xtrc="i:2;182:3">MDITA</i> branch.</p><p class="- topic/p " xtrf="file:/home/michael/Documents/ddac/ddac/GA-build.md" xtrc="p:3;182:3">The real work is done by the next job, <codeph class="+ topic/ph pr-d/codeph " xtrf="file:/home/michael/Documents/ddac/ddac/GA-build.md" xtrc="codeph:2;182:3">Build GFM</codeph>. It uses a Github Action created by <xref class="- topic/xref " href="https://github.com/jason-fox/dita-build-action" format="html" scope="external" xtrf="file:/home/michael/Documents/ddac/ddac/GA-build.md" xtrc="xref:1;182:3">Jason Fox</xref> which downloads the latest version of the DITA Open Toolkit and runs the build instruction.</p><p class="- topic/p " xtrf="file:/home/michael/Documents/ddac/ddac/GA-build.md" xtrc="p:4;182:3">The third job, <codeph class="+ topic/ph pr-d/codeph " xtrf="file:/home/michael/Documents/ddac/ddac/GA-build.md" xtrc="codeph:3;182:3">Upload DITA</codeph>, uploads the files outputted by the build to a folder called <codeph class="+ topic/ph pr-d/codeph " xtrf="file:/home/michael/Documents/ddac/ddac/GA-build.md" xtrc="codeph:4;182:3">out</codeph>.</p><p class="- topic/p " xtrf="file:/home/michael/Documents/ddac/ddac/GA-build.md" xtrc="p:5;182:3">The last job, <codeph class="+ topic/ph pr-d/codeph " xtrf="file:/home/michael/Documents/ddac/ddac/GA-build.md" xtrc="codeph:5;182:3">Deploy</codeph> uses a GitHub action written by <xref class="- topic/xref " href="https://github.com/JamesIves/github-pages-deploy-action" format="html" scope="external" xtrf="file:/home/michael/Documents/ddac/ddac/GA-build.md" xtrc="xref:2;182:3">James Ives</xref> originally meant to deploy content to a GitHub Pages branch but used here to move to the <codeph class="+ topic/ph pr-d/codeph " xtrf="file:/home/michael/Documents/ddac/ddac/GA-build.md" xtrc="codeph:6;182:3">docs</codeph> folder in the <codeph class="+ topic/ph pr-d/codeph " xtrf="file:/home/michael/Documents/ddac/ddac/GA-build.md" xtrc="codeph:7;182:3">docsify</codeph> branch.</p></body></topic>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="extlinks">    
+    <title>External links</title>
+    <topicref format="html" href="https://www.commonmark.org" keys="commonmark" scope="external" >
+        <topicmeta>
+            <navtitle>CommonMark specification</navtitle>
+        </topicmeta>
+    </topicref>
+    <topicref format="html" href="https://books.google.co.uk/books/about/Docs_Like_Code.html)" keys="docs-like-code" scope="external" > 
+        <topicmeta>
+            <navtitle>Docs like code</navtitle>
+        </topicmeta>
+    </topicref>
+    <topicref format="html" href="https://www.dita-ot.org/dev/topics/markdown-dita-syntax-reference.html" keys="MDITA-syntax-ref" scope="external">
+        <topicmeta>
+            <navtitle>MDITA syntax reference</navtitle>
+        </topicmeta>
+    </topicref>
+    <topicref format="html" href="https://fletcherpenney.net/multimarkdown/" keys="multimarkdown" scope="external">
+        <topicmeta>
+            <navtitle>MultiMarkdown</navtitle>
+        </topicmeta>
+    </topicref>
+    <topicref format="html" href="https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables" keys="gfm" scope="external">
+        <topicmeta>
+            <navtitle>GitHub-flavoured Markdown</navtitle>
+        </topicmeta>
+    </topicref>
+    <topicref format="html" href="https://github.com/jason-fox/dita-build-action" keys="jason-fox" scope="external">
+        <topicmeta>
+            <navtitle>Jason Fox</navtitle>
+        </topicmeta>
+    </topicref>
+    <topicref format="html" href="https://github.com/JamesIves/github-pages-deploy-action" keys="james-ives" scope="external">
+        <topicmeta>
+            <navtitle>James Ives</navtitle>
+        </topicmeta>
+    </topicref> 
+    <topicref format="html" href="https://www.grunt-industries.com/downloads.html" keys="grunt-downloads" scope="external">
+        <topicmeta>
+            <navtitle>Grunt Industries Downloads</navtitle>
+        </topicmeta>
+    </topicref>     
+</map>
