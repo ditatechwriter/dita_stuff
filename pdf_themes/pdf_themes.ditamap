@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="pdf-themes">
+    <title>PDF Themes</title>
+    <topicref href="pdf2_themes.dita" keys="pdf2-themes">
+        <topicref href="sample_theme_file.dita" keys="sample-theme-file"/>
+        <topicref href="limitations.dita" keys="limits"/>
+        <topicref href="conclusion.dita" keys="conclusion"/>
+    </topicref>
+</map>
