@@ -59,7 +59,7 @@ A few things of note:
 
 To refer to the last item in the map, use the following:
 
-```markdown
+```xml
 For more information see [MDITA-syntax-ref].
 ```
 When built, the key value is replaced by link entitled "MDITA syntax reference".
@@ -110,7 +110,7 @@ When you are defining keys always use the format of tags shown above.
 
 Within an MDITA topic the key is referenced by putting it within square brackets, for example:
 
-```
+```xml
 The [product_name] represents a leap forward in home exercise technology by [company_name]! 
 ```
 Once built, *\[product_name\]* will be replaced by "Grunt Master 6000", and *\[company_name\]* by "Grunt Industries".

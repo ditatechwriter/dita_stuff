@@ -6,8 +6,9 @@ MDITA is based on [CommonMark](https://commonmark.org/).
 
 ## Headings {.section}
 
-As DITA assigns heading level by position in the map, it's not a good idea to have more than one heading generally in an MDITA topic. If you want to have sections in your MDITA topic, assign a level 2 heading and add the *.section* class value in curly brackets as in the following example: 
-```
+As DITA assigns heading level by position in the map, it's not a good idea to have more than one heading generally in an MDITA topic. If you want to have sections in your MDITA topic, assign a level 2 heading and add the *.section* class value in curly brackets as in the following example:
+
+```xml
 # Topic title
 
 ## Section title {.section}
@@ -27,7 +28,7 @@ The first paragraph in an MDITA file is treated (in traditional DITA terms) as a
 
 Links use the following format:
 
-```
+```xml
 [Markdown](test.md)
 [DITA](test.dita)
 [HTML](test.html)
@@ -44,7 +45,7 @@ When the document is built the key is replaced by the title of the topic. The sa
 
 Images can be inline as well as on their own line and can be given titles and *alt* content.
 
-```
+```xml
 An inline ![Alt](test.jpg).
 
 ![Alt](test.jpg)
@@ -55,14 +56,14 @@ An inline ![Alt](test.jpg).
 
 The following inline elements are possible:
 
-```
+```xml
 **bold** or __bold__
 *italic* or _italic_
 ```
 
 Note that strikethough (as in GitHub-flavoured Markdown) is not permitted. Underline, codephrase, subscript, and superscript can added by using the relevant HDITA tags with a HDITA snippet:
 
-```
+```xml
 <p>This is an <u>underline</u>.</p>
 <p>This is an <sub>subscript</sub>.</p>
 <p>This is an <sup>superscript</sup>.</p>
@@ -71,7 +72,7 @@ Note that strikethough (as in GitHub-flavoured Markdown) is not permitted. Under
 
 There is no specific MDITA markup for Notes/Alerts/Callouts. Use the HDITA *\<note>* tag wrapped in a *\<p>* tag. Use the *type* attribute to define different types of alert. The options are given below:
 
-```
+```xml
 <p><note>This is a note</note></p>
 <p><note type="caution">This is a caution </note></p>
 <p><note type="danger">This is a danger</note></p>
@@ -85,7 +86,7 @@ Multi-level ordered and unordered lists are possible.
 
 Unordered lists:
 
-```
+```xml
 - Item 1
 - Item 2
 - Item 3
@@ -126,7 +127,7 @@ Example with 2nd level lists items:
 
 Ordered lists:
 
-```
+```xml
 1. Item 1
 1. Item 2
 1. Item 3
@@ -148,7 +149,7 @@ Ordered lists:
 
 MDITA also incorporates [multimarkdown] or [gfm] style tables:
 
-```
+```xml
 | First Header | Second Header | Third Header |
 | ------------ | :-----------: | -----------: |
 | Content      | *Long Cell*                 ||

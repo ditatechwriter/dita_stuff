@@ -5,11 +5,13 @@ author: Michael
 
 # MDITA frontmatter
 
-Frontmatter refers to the content in YAML format that can be placed at the start of an MDITA file. This content is essentially metadata that is useful when converting to other formats. This content, for example, is passed to the META tags in the HEAD of an HTML file. The content is also useful is the markdown file is ever converted to standard DITA XML.
+Frontmatter refers to the content in YAML format that can be placed at the start of an MDITA file.
+This content is essentially metadata that is useful when converting to other formats. 
+This content, for example, is passed to the META tags in the HEAD of an HTML file. The content is also useful is the markdown file is ever converted to standard DITA XML.
 
 Frontmatter is delineated by 3 dashes above and below and must be the first thing in the topic. There can be no spaces or empty lines before the frontmatter. For example:
 
-```
+```xml
 ---
 id: frontmatter
 author: Michael
@@ -17,7 +19,10 @@ author: Michael
 
 # MDITA frontmatter
 
-Frontmatter refers to the content in YAML format that can be placed at the start of an MDITA file. This content is essentially metadata that is useful when converting to other formats. This content, for example, is passed to the META tags in the HEAD of an HTML file. The content is also useful is the markdown file is ever converted to standard DITA XML.
+Frontmatter refers to the content in YAML format that can be placed at the start of an MDITA file.
+This content is essentially metadata that is useful when converting to other formats. 
+This content, for example, is passed to the META tags in the HEAD of an HTML file. 
+The content is also useful is the markdown file is ever converted to standard DITA XML.
 
 ...
 ```

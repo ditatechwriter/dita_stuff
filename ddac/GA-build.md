@@ -1,5 +1,5 @@
 ---
-id: GA-build
+author: Michael
 ---
 
 # Building output with GitHub Actions
@@ -52,10 +52,10 @@ jobs:
           TARGET-FOLDER: docs          
 ```
 
-The first job, *Git checkout*, is GitHub-provided action that checks out the branch the *MDITA* branch. 
+The first step, *Git checkout*, is GitHub-provided action that checks out the current branch. 
 
-The real work is done by the next job, *Build HTML*. It uses a Github Action created by [jason-fox] which downloads the latest version of the DITA Open Toolkit, installs a custom HTML 5 DITA-OT plugin from another repository and runs the build instruction using the *myproject.xml* project file. For more information oncinfguring project files, see [project-files].
+The real work is done by the next step, *Build HTML*. It uses a Github Action created by [jason-fox] which downloads the latest version of the DITA Open Toolkit, installs a custom HTML 5 DITA-OT plugin from another repository and runs the build instruction using the *myproject.xml* project file stored in the branch. For more information configuring project files, see [project-files].
 
-The third job, *Upload DITA*, uploads the files outputted by the build to a folder called *out*.
+The third step, *Upload DITA*, uploads the files outputted by the build to a folder called *out*.
 
-The last job, *Deploy* uses a GitHub action written by [james-ives] originally meant to deploy content to a GitHub Pages branch but used here to move to the *docs* folder in the *published* branch.
+The last step, *Deploy* uses a GitHub action written by [james-ives] originally meant to deploy content to a GitHub Pages branch but used here to move to the *docs* folder in the *published* branch.
