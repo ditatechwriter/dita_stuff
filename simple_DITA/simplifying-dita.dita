@@ -25,7 +25,7 @@
                     reference, or a concept topic. Just use the <i>topic</i> type for all topics.
                     This is essentially the approach in LwDITA.</p>
                 <p>This might have some DITA purists clutching their pearls over the very idea of
-                    using an ordered list for procedure instead of steps but, in the end, you can't
+                    using an ordered list for procedures instead of steps but, in the end, you can't
                     tell in the output, and you'll save someone from learning all those task
                     elements.</p>
             </li>
@@ -62,7 +62,9 @@
                                 <tt>&lt;li></tt> element).</p>
                     </li>
                     <li>
-                        <p>Configure toolbars to remove icons that are not used.</p>
+                        <p>Create a shareable custom frameworks for topics and maps that novice
+                            OxygenXML users can install allow them work with the reduced list of
+                            elements and attributes.</p>
                     </li>
                     <li>Define a simple editor layout with only the windows that are necessary, and
                         share this with new team members. This is a big help for new users.</li>

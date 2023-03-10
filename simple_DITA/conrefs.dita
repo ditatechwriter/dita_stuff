@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="conrefs">
+    <title>Conrefs</title>
+    <body>
+        <p>Custom Framework steps</p>
+        <ol id="frmwk-loc-steps">
+            <li id="frmwk-loc-step1">
+                <p>In the Oxygen UI, go to <b>Options</b>><b>Preferences</b>><b>Document Type
+                        Association</b>><b>Locations</b>, and click <b>Add</b>.</p>
+            </li>
+            <li id="frmwk-loc-step2">
+                <p>In the <b>Choose frameworks directory</b> dialog that appears, navigate to the
+                        <tt translate="no">custom_ frameworks</tt> folder, and click <b>OK</b>.</p>
+                <p>The path to your <tt translate="no">custom_ frameworks</tt> folder appears in the
+                        <b>Additional frameworks directories</b> list.</p>
+            </li>
+            <li id="frmwk-loc-step3">
+                <p>Click <b>OK</b> to save.</p>
+            </li>
+        </ol>
+    </body>
+</topic>

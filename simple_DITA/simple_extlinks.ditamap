@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map id="simple_extlinks">    
+    <title>External links</title>
+    <topicref href="https://www.oxygenxml.com/doc/versions/25.0/ug-editor/topics/customize-content-completion.html"
+        format="html" scope="external" keys="customize_cc" >
+        <topicmeta>
+            <navtitle>OxygenXML Help: Customize Content Completion</navtitle>
+        </topicmeta>
+    </topicref>
+    <topicref href="https://www.oxygenxml.com/doc/versions/25.0/ug-editor/topics/author-devel-guide-intro.html?hl=creating%2Cconfiguring%2Ccustom%2Cframeworks"
+        format="html" scope="external" keys="create-custom-frmwks">
+        <topicmeta>
+            <navtitle>OxygenXML Help: Create Custom Frameworks</navtitle>
+        </topicmeta>
+    </topicref>
+</map>

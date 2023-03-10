@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="framework_location">
+    <title>Configuring the custom framework location</title>
+    <body>
+        <p>Having set up a location for the custom frameworks, the next step is to tell Oxygen where
+            to find it:</p>
+        <ol conref="conrefs.dita#conrefs/frmwk-loc-steps">
+            <li><p/></li>
+        </ol>
+        <note>If you plan to continue on to the next part, you can skip the final step here and
+            continue working the <b>Preferences</b> dialog.</note>
+    </body>
+</topic>
