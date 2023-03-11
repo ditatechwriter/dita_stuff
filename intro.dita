@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="intro">
+    <title>Welcome</title>
+    <body>
+        <?oxy_custom_start type="oxy_content_highlight" color="255,255,0"?>
+        <image href="media/wookie1.jpg" scale="25">
+            <alt/>
+        </image><?oxy_custom_end?>
+        <p>I am Michael McLoughlin, an experienced professional technical writer based in Belfast,
+            N. Ireland (that's me on the right, BTW).</p>
+        <p>This site started out as a place for me to write up content on usually quite esoteric
+            DITA and DocOps subjects that I had researched to solve real world documentation
+            problems that I had encountered.</p>
+        <p>It then occurred to me that this content could also serve as a portfolio of work that
+            prospective employers could peruse to get idea of my writing skills and the of the kind
+            of things that interested me as a technical writer.</p>
+        <p>Please feel free to look around.</p>
+    </body>
+</topic>

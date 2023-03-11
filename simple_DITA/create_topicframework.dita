@@ -59,10 +59,10 @@
             below:</p>
         <simpletable frame="none" relcolwidth="1* 1*">
             <strow>
-                <stentry><image href="media/elements.png">
+                <stentry><image href="media/elements.png" scale="60">
                         <alt>Oxygen Elements window</alt>
                     </image></stentry>
-                <stentry><image href="media/attrs.png">
+                <stentry><image href="media/attrs.png" scale="60">
                         <alt>Oxygen Attributes window</alt>
                     </image></stentry>
             </strow>

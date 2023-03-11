@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>DITA-OT Project files</title>
+    <topicref href="automating-builds.md" format="markdown" keys="automating-builds">
+        <topicref href="project-file-structure.md" format="markdown" keys="project-file-structure"/>
+        <topicref href="build-multiple-docs.md" format="markdown" keys="build-multiple-docs"/>
+        <topicref href="other-project-functionality.md" format="markdown"
+            keys="other-project-functionality"/>
+    </topicref>
+</map>

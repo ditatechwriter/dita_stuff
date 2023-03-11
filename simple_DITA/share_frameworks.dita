@@ -28,7 +28,7 @@
                     that reference DITA and click <b>OK</b>. The example below is from my
                     machine:</p>
                 <fig>
-                    <image href="media/frameworks.png" scale="60">
+                    <image href="media/frameworks.png" scale="40">
                         <alt>Document Type Association dialog</alt>
                     </image>
                 </fig>
@@ -40,7 +40,7 @@
                 <p>To check for the new templates, click <b>File</b>><b>New</b>. The <b>Choose a
                         file template</b> dialog shows the new Topic and Map templates.</p>
                 <fig>
-                    <image href="media/templates.png" scale="50">
+                    <image href="media/templates.png" scale="40">
                         <alt>Choose a file template dialog</alt>
                     </image>
                 </fig>

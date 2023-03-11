@@ -1,8 +1,3 @@
----
-id: build-overview
-author: Michael
----
-
 # Building your content
 
 No matter how well written, content in MDITA is not much use on its own. We have to transform it into a target format that readers can actually use. Generally this is some form of HTML or, perhaps, PDF.

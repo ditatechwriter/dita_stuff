@@ -2,31 +2,22 @@
 <!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
 <map>
     <title>DITA as code</title>
-    <topicref format="markdown" href="Dita-dac.md" keys="ddac">
+    <topicref format="markdown" href="dita-as-code.md" keys="dac">
         <topicref href="dac.md" format="markdown"/>
     </topicref>
-    <topicref format="markdown" href="DITA4dac.md" keys="d4dac">
+    <topicref format="markdown" href="mdita.md" keys="mdita">
         <topicref format="markdown" href="write-review-MDITA.md" keys="write-MDITA">
             <topicref href="mdita_syntax.md" format="markdown" keys="mdita-syntax"/>
             <topicref href="frontmatter.md" format="markdown" keys="frontmatter"/>
         </topicref>
         <topicref href="HDITA-tags.md" format="markdown" keys="HDITA-tags"/>
-        <topicref format="markdown" href="Ditamaps4dac.md" keys="MDITA-maps">
-            <topicref href="using_maps.md" format="markdown" keys="using-maps"/>
-        </topicref>
+        <topicref href="using_maps.md" format="markdown" keys="using-maps"/>
         <topicref href="extended-markdown.md" format="markdown" keys="extended-markdown">
             <topicref format="markdown" href="MDITA-keys.md" keys="MDITA-keys"/>
             <topicref format="markdown" href="MDITA-conrefs.md" keys="MDITA-conrefs"/>
             <topicref format="markdown" href="MDITA-filters.md" keys="MDITA-filters"/>
         </topicref>
-        <topicref format="markdown" href="publish-MDITA.md" keys="publish-MDITA"/>
-        <topicref format="markdown" href="test.md" keys="test"/>
         <topicref href="get_out.md" format="markdown" keys="get-out"/>
-    </topicref>
-    <topicref href="build-overview.md" format="markdown" keys="build-overview">
-        <topicref href="build-local.md" format="markdown" keys="build-local"/>
-        <topicref format="markdown" href="GA-build.md" keys="GA-build"/>
-        <topicref href="project-files.md" format="markdown" keys="project-files"/>
     </topicref>
     <!--<topicref format="markdown" href="pubs-pipeline.md" keys="pubs-pipeline">
         <topicref format="markdown" href="slack-notify.md" keys="slack-notify"/>

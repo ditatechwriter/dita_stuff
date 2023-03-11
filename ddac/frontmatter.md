@@ -1,8 +1,3 @@
----
-id: frontmatter
-author: Michael
----
-
 # MDITA frontmatter
 
 Frontmatter refers to the content in YAML format that can be placed at the start of an MDITA file.
@@ -13,7 +8,6 @@ Frontmatter is delineated by 3 dashes above and below and must be the first thin
 
 ```xml
 ---
-id: frontmatter
 author: Michael
 ---
 

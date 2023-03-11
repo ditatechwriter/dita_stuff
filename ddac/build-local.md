@@ -1,8 +1,3 @@
----
-id: build-local
-author: Michael
----
-
 # Building locally
 
 Even if you have set an automated build in GitHub or whatever, it is always good to be able to build content locally so you can be sure that it builds properly, and nothing you have just done breaks the automated build.

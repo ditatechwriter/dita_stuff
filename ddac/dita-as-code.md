@@ -1,14 +1,10 @@
----
-id: DITA-vs-docs-as-code
----
+# DITA-as-code
 
-# DITA versus docs-as-code
+The docs-as-code philosophy has revolutionized the way technical documentation in software projects is written, managed, and published. 
 
-The docs-as-code philosophy has revolutionized the way technical documentation in software projects is written, managed and published. 
+Documentation is treated in the same manner as the code developed for the software itself. It can be written in the same text editors, and it is stored and managed using the same version control systems (VCS) as the code (most commonly Git). 
 
-Documentation is treated in the same manner as the code developed for the software itself. It is written in the same text editors, and it is stored and managed using the same version control systems (VCS) as the code (most commonly Git). 
-
-Publishing content produced in this manner has never been easier. Technical writing team have a whole array of static site generators that produce full-featured, elegant, and easy-to-use documentation websites.
+Publishing content produced in this manner has never been easier. Technical writing teams have a whole array of static site generators that produce full-featured, elegant, and easy-to-use documentation websites.
 
 There are many advantages for technical writing teams in using a docs-as-code approach:
 
@@ -20,7 +16,7 @@ There are many advantages for technical writing teams in using a docs-as-code ap
 
 That said, however, the docs-as-code approach also has limitations:
 
-- Markdown's simplicity is also it's greatest weakness. There are no mechanisms to allow for content reuse, text variables, or conditional filtering, making documentation updates a chore.
+- Markdown's simplicity is also its greatest weakness. There are no mechanisms for content reuse, text variables, or conditional filtering. This makes documentation maintenance hard.
 - Lack of content reuse features makes managing documentation difficult.
   - If content exists in multiple places in a document, it needs to be updated in all those places if changed.
   - If there are multiple variants of a product (e.g. Lite, Professional, Enterprise) discreet copies of the documentation need to be kept even if the content is mostly identical. Any updates to shared content will need to be made in each copy.
@@ -31,12 +27,12 @@ The Darwin Information Typing Architect - DITA for short - is the most popular X
 
 DITA files are flat XML files and so are perfect to use with a modern VCS like Git.
 
-DITA real selling point is that it has all the content reuse features that Markdown documentation lacks which makes it very useful when working with large document sets and complex publishing needs. But, it also has quite a few drawbacks:
+DITA real selling point is that it has all the content reuse features that Markdown documentation lacks which makes it very useful when working with large document sets and complex publishing needs. But, it also has a few drawbacks:
 
-- The DITA element set is large - 189 tags. The learning curve for new writers can be steep.
+- The DITA element set is large - 189 tags for the base implementation. The learning curve for new writers can be steep.
 - Writing in DITA requires writers to use an XML editor that validates the XML they write. 
-- Editing raw DITA is not possible for anyone not trained to use it and without a an XML editor. 
+- Editing raw DITA is not possible for anyone not trained to use it and without an XML editor. So unlike Markdown, it cannot really be reviewed on GitHub.
 - DITA uses the DITA Open Toolkit to transform DITA XML into other formats. The output, however, is basic and it requires a lot of (usually specialist) work in XSLT and CSS to produce a good-looking documentation website from DITA source files.
-- Moving to DITA can be lengthy and costly in terms of training and specialist consultancy.
+- Moving to DITA can sometimes be lengthy and costly in terms of training and specialist consultancy.
 
 

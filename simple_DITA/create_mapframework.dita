@@ -59,10 +59,10 @@
             below:</p>
         <simpletable frame="none" relcolwidth="1* 1*">
             <strow>
-                <stentry><image href="media/map_elements.png">
+                <stentry><image href="media/map_elements.png" scale="60">
                         <alt/>
                     </image></stentry>
-                <stentry><image href="media/map_attrs.png">
+                <stentry><image href="media/map_attrs.png" scale="60">
                         <alt/>
                     </image></stentry>
             </strow>
