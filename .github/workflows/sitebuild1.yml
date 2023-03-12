@@ -17,8 +17,12 @@ jobs:
         uses: dita-ot/dita-build-action@master
         with:
           install: |
+            apt-get update -q
+            apt-get install -qy --no-install-recommends nodejs
+            nodejs -v
             dita install fox.jason.extend.css
             dita install net.infotexture.dita-bootstrap
+            dita install fox.jason.prismjs
           build:  |
             dita --project=portfolio-proj.xml --theme=TestPDF-theme.yaml         
       - name: Upload DITA
