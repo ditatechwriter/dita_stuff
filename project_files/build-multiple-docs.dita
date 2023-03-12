@@ -8,7 +8,7 @@
       deliverable in one output format. But with project files you can include many different
       deliverables and even several different deliverables for the same ditamap. See the following
       sample project file, <tt>gm_deliverables.xml</tt>:</p>
-        <pre xml:space="preserve" outputclass="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+        <codeblock xml:space="preserve" outputclass="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;project xmlns="https://www.dita-ot.org/project"&gt;
 
 &lt;--! Grunt Master 6000 Guide deliverables --&gt;
@@ -54,7 +54,7 @@
     &lt;/publication&gt;
   &lt;/deliverable&gt;
   
-&lt;/project&gt;</pre>
+&lt;/project&gt;</codeblock>
         <p>The above example builds 3 deliverables from 2 source ditamaps. All 3 deliverables can be
             built with just one command:</p>
         <pre xml:space="preserve" outputclass="language-bourne">dita --project=gm_deliverables.xml</pre>
