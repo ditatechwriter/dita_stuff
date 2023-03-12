@@ -1,0 +1,234 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="copyright" content="(C) Copyright 2023"><meta name="generator" content="DITA-OT"><meta name="prodname" content="Unified Payments eFill"><meta name="version" content="1.0"><title>Creating a cc_config.xml file</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="../css/commonltr.css">
+<link rel="stylesheet" type="text/css" href="../css/common-extended.css"></head><body id="cc_config"><div class="visually-hidden-focusable overflow-hidden p-2 bg-light"><div class="container-xl"><a class="d-inline-flex m-1 btn btn-outline-primary btn-sm" href="#ariaid-title1">Skip to main content</a><a href="#bs-sidebar-nav" class="d-none d-md-inline-flex m-1 btn btn-outline-primary btn-sm">Skip to docs navigation</a></div></div><div class="bs-header"><header role="banner"><nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bootstrap" viewBox="0 0 16 16">
+        <path d="M5.062 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062V12zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23H6.375zm0 3.762V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377H6.375z"/>
+        <path d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4zm4-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3H4z"/>
+      </svg>
+      DITA Bootstrap
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link One</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link Two</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link Three</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav></header></div><div class="bs-container" id="content"><nav class="bs-sidebar-nav" role="navigation" id="bs-sidebar-nav"><ul><li><a href="../ddac/mdita.html">Working with MDITA</a></li><li><a href="../simple_DITA/simplifying-dita.html">Simplifying DITA</a><ul><li class="active"><a href="../simple_DITA/cc_config.html">Creating a cc_config.xml file</a></li><li><a href="../simple_DITA/framework_setup.html">Setting up a custom framework</a></li><li><a href="../simple_DITA/framework_location.html">Configuring the custom framework location</a></li><li><a href="../simple_DITA/create_topicframework.html">Creating the simple_dita framework</a></li><li><a href="../simple_DITA/create_mapframework.html">Creating the simple_ditamap framework</a></li><li><a href="../simple_DITA/simple-editor-layout.html">A simple editor layout</a></li><li><a href="../simple_DITA/share_frameworks.html">Sharing the frameworks and layout</a></li></ul></li><li><a href="../pdf_themes/pdf2_themes.html">PDF2 theme files</a></li><li><a href="../project_files/automating-builds.html">Automating DITA builds</a></li><li><a href="../GA_builds/GA-build.html">DITA CICD with GitHub Actions</a></li></ul></nav><main role="main" class="container bs-main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title text-dark" id="ariaid-title1">Creating a <span class="ph tt" style="font-family: monospace">cc_config.xml</span> file</h1>
+    <div class="body">
+        <p class="p">The Oxygen <span class="ph tt" style="font-family: monospace">cc_config.xml</span> file allows you define which DITA
+            elements and attributes are displayed in the Elements and Attributes windows in the
+            Oxygen UI.  By configuring element proposals in the <span class="ph tt" style="font-family: monospace">cc_config.xml</span> file, you can control which elements and attributes your users
+            can add to topics and maps.</p>
+        <div role="alert" class="note alert alert-info"><span class="note__title">Note:</span> You are not writing a new DTD here, so a writer could technically manually type in any
+            legal DITA element or attribute and the topic would still validate.</div>
+        <p class="p">To create a new <span class="ph tt" style="font-family: monospace">cc_config.xml</span> file, you could copy and edit the
+            default file that lives in the <span class="ph tt" style="font-family: monospace">[Oxygen install
+                folder]/frameworks/dita/resources</span> folder. Alternatively you can create one from
+            scratch using a conveniently-provided template that you can open from
+                <strong class="ph b">File</strong>&gt;<strong class="ph b">New</strong>&gt;<strong class="ph b">Framework templates</strong>&gt;<strong class="ph b">Oxygen
+                extensions</strong>&gt;<strong class="ph b">Content Completion Configuration</strong>. </p>
+        <p class="p">The template contains some sample code (which you can adopt or delete). The Oxygen online
+            help provides fairly comprehensive information on how work with the <span class="ph tt" style="font-family: monospace">cc_config.xml</span> file.</p>
+        <p class="p">For more information, see <a class="xref" href="https://www.oxygenxml.com/doc/versions/25.0/ug-editor/topics/customize-content-completion.html" target="_blank" rel="external noopener">OxygenXML Help: Customize Content Completion</a>.</p>
+        <section class="section" id="cc_config__section_jsz_cnb_twb"><h2 class="title h4 text-secondary">A sample cc_config.xml file</h2>
+            
+            <p class="p">I have created a sample <span class="ph tt" style="font-family: monospace">cc_config.xml</span> file based largely on
+                the Lightweight DITA 1.0 XDITA proposal for a reduced list of DITA elements. Of
+                course, your <span class="ph tt" style="font-family: monospace">cc_config.xml</span> file could contain any elements
+                and attributes you deem necessary. </p>
+            <p class="p">In addition to restricting the available elements and attributes for users, this <span class="ph tt" style="font-family: monospace">cc_config.xml</span> file also defines child elements or mandatory
+                attributes and attribute values to be included (or omitted) for some elements. To
+                give one example, if you add a <span class="ph tt" style="font-family: monospace">&lt;section&gt;</span> element, Oxygen
+                will also add a <span class="ph tt" style="font-family: monospace">&lt;title&gt;</span> and <span class="ph tt" style="font-family: monospace">&lt;p&gt;</span> child elements.</p>
+        </section>
+        <pre class="pre border rounded language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!-- 
+    Allows contributing to the values presented on content completion for element and attribute values.
+    You can append to the values obtained from the schema or replace them all together.
+    These values can be given as literal values or they can be obtained by executing an XSLT script.
+    
+    IMPORTANT: This file must be saved as cc_config.xml in a folder that is present in the Classpath
+    of the Document Type (or framework).
+--&gt;
+&lt;?xml-model href="http://www.oxygenxml.com/ns/ccfilter/config/ccConfigSchemaFilter.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;
+&lt;config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.oxygenxml.com/ns/ccfilter/config http://www.oxygenxml.com/ns/ccfilter/config/ccConfigSchemaFilter.xsd"
+    xmlns="http://www.oxygenxml.com/ns/ccfilter/config"&gt;
+
+    &lt;elementProposals
+        possibleElements="
+        
+        topic title shortdesc prolog body section p 
+        ph ul ol li dl 
+        dlentry dt dd pre 
+        simpletable sthead strow stentry 
+        fig image object desc alt note tt xref
+        
+        map topicref topicmeta navtitle data mapref keydef keywords keyword	    	
+        "
+        
+        possibleAttributes="
+        DITAArchVersion 
+        domains class outputclass 
+        id href conref keyref keys 
+        processing-role scope format type 
+        props others dir xml:lang translate"/&gt;
+    
+    &lt;elementProposals path="ol/li" insertElements="p"/&gt;
+    &lt;elementProposals path="ul/li" insertElements="p"/&gt;
+    &lt;elementProposals path="image" rejectAttributes="alt"/&gt;
+    &lt;elementProposals path="image" insertElements="alt"/&gt;
+    &lt;elementProposals path="fig" insertElements="title image"/&gt;
+    &lt;elementProposals path="section" insertElements="title p"/&gt;
+    &lt;elementProposals path="table" insertElements="title"/&gt;
+    &lt;elementProposals path="topicref" rejectAttributes="navtitle"/&gt;
+    
+    &lt;elementProposals path="pre"&gt;
+		&lt;insertAttribute name="translate" value="no"/&gt;
+	&lt;/elementProposals&gt;
+
+	&lt;elementProposals path="tt"&gt;
+		&lt;insertAttribute name="translate" value="no"/&gt;
+	&lt;/elementProposals&gt;
+    
+    &lt;match attributeName="translate"&gt;
+        &lt;items action="addIfEmpty"&gt;
+            &lt;item value="yes"/&gt;
+            &lt;item value="no"/&gt;
+        &lt;/items&gt;
+    &lt;/match&gt;
+    
+    &lt;match attributeName="dir"&gt;
+        &lt;items action="addIfEmpty"&gt;
+            &lt;item value="ltr" annotation="right-to-left text"/&gt;
+            &lt;item value="rtl" annotation="left-to-right text"/&gt;
+            &lt;item value="lro" annotation="left-to-right override"/&gt;
+            &lt;item value="rto" annotation="right-to-left override"/&gt;
+        &lt;/items&gt;
+    &lt;/match&gt;
+    
+    &lt;!-- Contributes values for xml:lang attribute --&gt;
+    &lt;match attributeName="lang"&gt;
+        &lt;items action="addIfEmpty"&gt;
+            &lt;item value="de" annotation="German"/&gt;
+            &lt;item value="de-DE" annotation="German"/&gt;
+            &lt;item value="en" annotation="English"/&gt;
+            &lt;item value="en-US" annotation="English (US)"/&gt;
+            &lt;item value="es" annotation="Spanish"/&gt;
+            &lt;item value="fi" annotation="Finnish"/&gt;
+            &lt;item value="fr" annotation="French"/&gt;
+            &lt;item value="fr-FR" annotation="French"/&gt;
+            &lt;item value="he" annotation="Hebrew"/&gt;
+            &lt;item value="it" annotation="Italian"/&gt;
+            &lt;item value="it-IT" annotation="Italian"/&gt;
+            &lt;item value="ja" annotation="Japanese"/&gt;
+            &lt;item value="ja-JP" annotation="Japanese"/&gt;
+            &lt;item value="nl" annotation="Dutch"/&gt;
+            &lt;item value="ro" annotation="Romanian"/&gt;
+            &lt;item value="ru" annotation="Russian"/&gt;
+            &lt;item value="sl" annotation="Slovenian"/&gt;
+            &lt;item value="sv" annotation="Swedish"/&gt;
+            &lt;item value="zh" annotation="Chinese"/&gt;
+            &lt;item value="zh-CN" annotation="Chinese (simplified)"/&gt;
+        &lt;/items&gt;
+    &lt;/match&gt;
+    
+    &lt;match elementName="note" attributeName="type" editable="onlyAllowedItems"&gt;
+        &lt;items action="replace"&gt;
+            &lt;item value="note"/&gt;
+            &lt;item value="caution"/&gt;
+            &lt;item value="tip"/&gt;
+            &lt;item value="important"/&gt;
+            &lt;item value="remember"/&gt;
+            &lt;item value="restriction"/&gt;
+            &lt;item value="other"/&gt;
+        &lt;/items&gt;
+    &lt;/match&gt;
+    
+    &lt;match attributeName="format"&gt;
+        &lt;items action="addIfEmpty"&gt;
+            &lt;item value="dita"/&gt;
+            &lt;item value="ditamap"/&gt;
+            &lt;item value="html"/&gt;
+            &lt;item value="pdf"/&gt;
+            &lt;item value="markdown"/&gt;
+            &lt;item value="mdita"/&gt;
+            &lt;item value="png"/&gt;
+            &lt;item value="svg"/&gt;
+            &lt;item value="gif"/&gt;
+            &lt;item value="jpg"/&gt;
+            &lt;item value="zip"/&gt;
+        &lt;/items&gt;
+    &lt;/match&gt;
+    
+    &lt;match elementName="object" attributeName="type"&gt;
+        &lt;items action="addIfEmpty"&gt;
+            &lt;item value="video/mp4"/&gt;
+            &lt;item value="video/ogg"/&gt;
+            &lt;item value="audio/mpeg"/&gt;
+            &lt;item value="audio/ogg"/&gt;
+            &lt;item value="audio/wav"/&gt;
+        &lt;/items&gt;
+    &lt;/match&gt;
+    
+    &lt;match elementName="pre" attributeName="outputclass"&gt;
+        &lt;items action="addIfEmpty"&gt;
+            &lt;item value="language-xml"
+                annotation="Provide content highlight in the DITA-OT XHTML and PDF outputs for XML."/&gt;
+            &lt;item value="language-java"
+                annotation="Provide content highlight in the DITA-OT XHTML and PDF outputs for Java."/&gt;
+            &lt;item value="language-css"
+                annotation="Provide content highlight in the DITA-OT XHTML and PDF outputs for CSS."/&gt;
+            &lt;item value="language-javascript"
+                annotation="Provide content highlight in the DITA-OT XHTML and PDF outputs for JavaScript."/&gt;
+            &lt;item value="language-json"
+                annotation="Provide content highlight in the DITA-OT XHTML and PDF outputs for JSON."/&gt;
+            &lt;item value="language-sql"
+                annotation="Provide content highlight in the DITA-OT XHTML and PDF outputs for SQL."/&gt;
+            &lt;item value="language-c"
+                annotation="Provide content highlight in the DITA-OT XHTML and PDF outputs for C."/&gt;
+            &lt;item value="language-cpp"
+                annotation="Provide content highlight in the DITA-OT XHTML and PDF outputs for C++."/&gt;
+            &lt;item value="language-csharp"
+                annotation="Provide content highlight in the DITA-OT XHTML and PDF outputs for C#."/&gt;
+            &lt;item value="language-ini"
+                annotation="Provide content highlight in the DITA-OT XHTML and PDF outputs for ini scripts."/&gt;
+            &lt;item value="language-python"
+                annotation="Provide content highlight in the DITA-OT XHTML and PDF outputs for Python."/&gt;
+            &lt;item value="language-ruby"
+                annotation="Provide content highlight in the DITA-OT XHTML and PDF outputs for Ruby."/&gt;
+            &lt;item value="language-perl"
+                annotation="Provide content highlight in the DITA-OT XHTML and PDF outputs for Perl."/&gt;
+            &lt;item value="language-bourne"
+                annotation="Provide content highlight in the DITA-OT XHTML and PDF outputs for Bourne Shell."/&gt;
+            &lt;item value="language-php"
+                annotation="Provide content highlight in the DITA-OT XHTML and PDF outputs for PHP."/&gt;
+            &lt;item value="language-lua"
+                annotation="Provide content highlight in the DITA-OT XHTML and PDF outputs for Lua."
+            /&gt;
+        &lt;/items&gt;
+    &lt;/match&gt;
+    
+&lt;/config&gt;
+</pre>
+    </div>
+<nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../simple_DITA/simplifying-dita.html">Simplifying DITA</a></div></div></nav></article></main></div></body></html>

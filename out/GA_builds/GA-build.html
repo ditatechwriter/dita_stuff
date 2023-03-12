@@ -1,0 +1,141 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="copyright" content="(C) Copyright 2023"><meta name="generator" content="DITA-OT"><meta name="description" content="GitHub Actions are a quick and easy way to automate build outputs form DITA content stored in a GitHub repository."><meta name="prodname" content="Unified Payments eFill"><meta name="version" content="1.0"><title>DITA CICD with GitHub Actions</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="../css/commonltr.css">
+<link rel="stylesheet" type="text/css" href="../css/common-extended.css"></head><body id="building-output-with-github-actions"><div class="visually-hidden-focusable overflow-hidden p-2 bg-light"><div class="container-xl"><a class="d-inline-flex m-1 btn btn-outline-primary btn-sm" href="#ariaid-title1">Skip to main content</a><a href="#bs-sidebar-nav" class="d-none d-md-inline-flex m-1 btn btn-outline-primary btn-sm">Skip to docs navigation</a></div></div><div class="bs-header"><header role="banner"><nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bootstrap" viewBox="0 0 16 16">
+        <path d="M5.062 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062V12zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23H6.375zm0 3.762V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377H6.375z"/>
+        <path d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4zm4-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3H4z"/>
+      </svg>
+      DITA Bootstrap
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link One</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link Two</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link Three</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav></header></div><div class="bs-container" id="content"><nav class="bs-sidebar-nav" role="navigation" id="bs-sidebar-nav"><ul><li><a href="../ddac/mdita.html">Working with MDITA</a></li><li><a href="../simple_DITA/simplifying-dita.html">Simplifying DITA</a></li><li><a href="../pdf_themes/pdf2_themes.html">PDF2 theme files</a></li><li><a href="../project_files/automating-builds.html">Automating DITA builds</a></li><li class="active"><a href="../GA_builds/GA-build.html">DITA CICD with GitHub Actions</a><ul><li><a href="../GA_builds/cfg-dita-ot-action.html">Configuring the dita-ot-action</a></li><li><a href="../GA_builds/multi-deliverables.html">Building multiple deliverables in GitHub</a></li></ul></li></ul></nav><main role="main" class="container bs-main"><article role="article" aria-labelledby="ariaid-title1">
+    <h1 class="title text-dark" id="ariaid-title1">DITA CICD with GitHub Actions</h1>
+  
+    <div class="body"><p class="shortdesc text-muted lead">GitHub Actions are a quick and easy way to automate build outputs form DITA content
+    stored in a GitHub repository. </p>
+        <p class="p">The following code is a simple GitHub Actions workflow builds HTML5 files from MDITA
+            content and deposits them in a branch called <em class="ph i">published</em>. This build is kicked off
+            manually from GitHub but, as you can see in the code snippet below, you can also set it
+            start builds on push or on pull_requests to a certain branch. It is also possible to
+            configure a cron job to run the build at a specific time.</p>
+        <pre class="pre border rounded yaml">name: site-build
+
+# Controls when the action will run. 
+on:
+
+  # Triggers the workflow on push events but only for the main branch
+  push:
+    branches: [ main ]
+
+jobs:
+  build-dita:
+    name: Build DITA
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v2
+      - name: Build HTML5
+        id: DITA-build
+        uses: dita-ot/dita-build-action@master
+        with:
+          install: |
+            dita install fox.jason.extend.css
+            dita install net.infotexture.dita-bootstrap
+            dita install fox.jason.prismjs
+          build:  |
+            dita --project=myproject.xml          
+      - name: Upload DITA
+        id: upload
+        uses: actions/upload-artifact@v2
+        with:
+          name: dita-artifact
+          path: ‘out’
+      - name: Deploy
+        id: deploy
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: published # The branch the action should deploy to.
+          FOLDER: out # The folder the action should deploy.
+          TARGET-FOLDER: docs          </pre>
+    <p class="p">The <span class="ph tt" style="font-family: monospace">jobs</span> section of the workflow file spins up an Ubuntu Linux instance and then
+      runs a series of steps:</p>
+    <ol class="ol">
+      <li class="li">
+        <p class="p">The first step, <em class="ph i">Git checkout</em>, is GitHub-provided action that checks out the
+          current branch.</p>
+      </li>
+      <li class="li">
+        <p class="p">The real work is done by the next step, <em class="ph i">Build HTML5</em>. It uses the
+            <em class="ph i">dita-build-action</em> GitHub Action created by <a class="xref" href="https://github.com/jason-fox/dita-build-action" target="_blank" rel="external noopener">Jason Fox</a> which
+          downloads the latest version of the DITA Open Toolkit,  installs 3 required plugins from
+          the DITA-OT plugin registry, and runs the build instruction using the <em class="ph i">myproject.xml</em>
+          project file stored in the branch. The <em class="ph i">myproject.xml</em> project file contains all the
+          information on the source ditamap, output transtype, output folder, filter files, and any
+          build parameters. For more information on configuring project files, see <a class="xref" href="../project_files/project_files.ditamap">../project_files/project_files.ditamap</a>.</p>
+      </li>
+      <li class="li">
+        <p class="p">The third step, <em class="ph i">Upload DITA</em>, uploads the files outputted by the build to a folder
+          called <em class="ph i">out</em>.</p>
+      </li>
+      <li class="li">
+        <p class="p">The last step, <em class="ph i">Deploy</em> uses a GitHub action written by <a class="xref" href="https://github.com/JamesIves/github-pages-deploy-action" target="_blank" rel="external noopener">James Ives</a>
+          originally meant to deploy content to a GitHub Pages branch but used here to move to the
+            <em class="ph i">docs</em> folder in the <em class="ph i">published</em> branch. From there web hooks could be
+          employed to the content to a service like Netlify.</p>
+      </li>
+    </ol>
+    <section class="section" id="building-output-with-github-actions__section_sbd_ppc_5wb"><h2 class="title h4 text-secondary">Manual builds</h2>
+      
+      <p class="p">The example above runs when a content is pushed to the <span class="ph tt" style="font-family: monospace">main</span> branch. When you are
+        testing builds, it's easier to run builds manually. Adding the <span class="ph tt" style="font-family: monospace">workflow_dispatch</span>
+        event trigger to your workflow file allows you to build manually by clicking <strong class="ph b">Run
+          workflow</strong> on the <strong class="ph b">Actions</strong> tab in the GitHub UI.</p>
+      <pre class="pre border rounded yaml">name: site-build
+
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+...</pre>
+    </section>
+    <section class="section" id="building-output-with-github-actions__section_tcs_5pc_5wb"><h2 class="title h4 text-secondary">Timed builds with cron</h2>
+      
+      <p class="p">In a mature CI/CD docs environment, documentation can be built and deployed on a regular,
+        perhaps daily, basis. Workflows can integrate cron jobs that kick off the builds on
+        specified days and times. The example below runs the build every weekday night at 2am:</p>
+      <pre class="pre border rounded yaml">name: site-build
+
+on:
+  schedule:
+    # Runs "at 02:00 every Mon-Fri"
+    - cron: '* 2 * * 1-5'
+
+...</pre>
+      <div role="alert" class="note alert alert-info"><span class="note__title">Note:</span> For help with cron notation, <a class="xref" href="https://crontab.guru/" target="_blank" rel="external noopener">https://crontab.guru/</a> is useful resource.</div>
+    </section>
+    </div>
+<nav role="navigation" class="related-links"><ul class="ullinks"><li class="link ulchildlink"><strong><a href="../GA_builds/cfg-dita-ot-action.html">Configuring the dita-ot-action</a></strong><br></li><li class="link ulchildlink"><strong><a href="../GA_builds/multi-deliverables.html">Building multiple deliverables in GitHub</a></strong><br></li></ul></nav></article></main></div></body></html>
