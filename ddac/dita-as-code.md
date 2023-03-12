@@ -9,8 +9,8 @@ Publishing content produced in this manner has never been easier. Technical writ
 There are many advantages for technical writing teams in using a docs-as-code approach:
 
 - Documents are generally written in Markdown. Markdown is simple, can be learned in a few minutes, and can be written in any text editor.
-- All the main online VCS services (GitHub, GitLab, Bitbucket) have built in Markdown interpreters.
-- Developers use Markdown a lot, so the format is no barrier to getting documentation reviewed. 
+- All the main online VCS services (GitHub, GitLab, Bitbucket) have built-in Markdown interpreters.
+- Developers use Markdown a lot, so the format is no barrier to getting documentation reviewed or receiving SME contributions. 
 - Static site generators (SSG) for Markdown content are often simple to set up and configure (although that might depend on the SSG you choose and the complexity of what you want it to do).
 - It is relatively cheap, quick and easy for a documentation team to start using a docs-as-code tool-chain to produce a documentation website.
 
@@ -18,7 +18,7 @@ That said, however, the docs-as-code approach also has limitations:
 
 - Markdown's simplicity is also its greatest weakness. There are no mechanisms for content reuse, text variables, or conditional filtering. This makes documentation maintenance hard.
 - Lack of content reuse features makes managing documentation difficult.
-  - If content exists in multiple places in a document, it needs to be updated in all those places if changed.
+  - If content exists in multiple places in a document, it needs to be updated in all those places if changed. It also means money wasted on translating the same text multiple times.
   - If there are multiple variants of a product (e.g. Lite, Professional, Enterprise) discreet copies of the documentation need to be kept even if the content is mostly identical. Any updates to shared content will need to be made in each copy.
 
 ## What about DITA?

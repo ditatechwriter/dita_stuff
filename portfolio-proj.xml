@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="https://www.dita-ot.org/project">
+  
+  <deliverable name="Portfolio" id="portfolio_html5"> 
+    <context name="Portfolio" id="portfolio-html5">
+      <input href="portfolio.ditamap"/>
+      <profile>
+        <ditaval href="excludePDF.ditaval"/>
+      </profile>
+    </context>
+    <output href="out"/>
+    <publication transtype="html5-bootstrap"/>
+  </deliverable>
+  
+  <deliverable name="Portfolio PDF" id="portfolio_pdf"> 
+    <context name="Portfolio" id="portfolio-pdf">
+      <input href="portfolio.ditamap"/>
+      <profile>
+        <ditaval href="excludeHTML.ditaval"/>
+      </profile>
+    </context>
+    <output href="out/pdf"/>
+    <publication transtype="pdf2">
+      <param name="args.chapter.layout" href="BASIC"/>
+      <param name="args.outputfile.base" value="Technical Writing Portfolio"/>
+    </publication>
+  </deliverable>
+  
+</project>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="dita-ot-project-file-structure">
+    <title>DITA-OT project file structure</title>
+    <body>
+        <p>A DITA project file is an XML file containing build parameters for one or more documents
+            that you can pass to the <tt>dita</tt> build command.</p>
+        <p>The following is a sample project file in XML format:</p>
+        <pre xml:space="preserve" outputclass="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;project xmlns="https://www.dita-ot.org/project"&gt;
+  
+  &lt;deliverable name="Grunt Master 6000 Guide" id="ug_gruntmaster6000_html5"&gt; 
+    &lt;context name="Grunt Master 6000 Guide" id="ug_gruntmaster6000"&gt;
+        &lt;input href="ug_gruntmaster6000.ditamap"/&gt;
+        &lt;profile&gt;
+            &lt;ditaval href="GM6000.ditaval"/&gt;
+        &lt;/profile&gt;
+    &lt;/context&gt;
+    &lt;output href="out"/&gt;
+    &lt;publication transtype="html5"&gt;
+        &lt;param name="args.css" href="../css/custom.css"/&gt;
+        &lt;param name="args.copycss" value="yes"/&gt;
+    &lt;/publication&gt;
+  &lt;/deliverable&gt;
+  
+&lt;/project&gt;</pre>
+        <simpletable relcolwidth="1.0* 4.84*">
+            <sthead>
+                <stentry>Element</stentry>
+                <stentry>Description</stentry>
+            </sthead>
+            <strow>
+                <stentry>project</stentry>
+                <stentry>The wrapper element for deliverables in the project file. It contains only
+                    one attribute <tt>xmlns</tt> which defines the XML namespace for the elements in
+                    the file.</stentry>
+            </strow>
+            <strow>
+                <stentry>deliverable</stentry>
+                <stentry>The wrapper element for all the deliverable parameters. Its attributes
+                    define the deliverable name and a unique ID for the deliverable.</stentry>
+            </strow>
+            <strow>
+                <stentry>context</stentry>
+                <stentry>This element wraps the elements that hold the input information (the source
+                    ditamap) and filters that are used by the build. <note>Context elements can be
+                        used independently of the deliverable elements and so can employ their own
+                        name and unique ID attributes.</note></stentry>
+            </strow>
+            <strow>
+                <stentry>input</stentry>
+                <stentry>This element contains the relative path to the input ditamap you want to
+                    use for the build within a <tt>href</tt> attribute.</stentry>
+            </strow>
+            <strow>
+                <stentry>profile </stentry>
+                <stentry>The &lt;profile&gt; element wraps one or more &lt;ditamap&gt;
+                    elements.</stentry>
+            </strow>
+            <strow>
+                <stentry>ditaval</stentry>
+                <stentry>This element contains the relative path to the any filter file you want to
+                    use for the build within a <tt>href</tt> attribute. There can multiple
+                    &lt;ditaval&gt; tags for each context.</stentry>
+            </strow>
+            <strow>
+                <stentry>output</stentry>
+                <stentry>This element contains the relative path to the output folder where you want
+                    the outputted content to be deposited within a <tt>href</tt>
+                    attribute.</stentry>
+            </strow>
+            <strow>
+                <stentry>publication</stentry>
+                <stentry>The &lt;publication&gt; element wraps parameter elements which content the
+                    build parameters to be fed to the DITA-OT. Importantly, it also must contain a
+                        <tt>transtype</tt> attribute that tells the DITA-OT which output format to
+                    transform the content into.</stentry>
+            </strow>
+            <strow>
+                <stentry>param</stentry>
+                <stentry>This element contains the actual build parameters that the DITA-OT will use
+                    when creating the output. Build generally differ according to the output you
+                    have defined in the &lt;publication&gt; element <tt>transtype</tt> attribute.
+                    For a full list of parameters by output format, see the <xref
+                        href="https://www.dita-ot.org/dev/parameters/parameters-pdf.html"
+                        format="html" scope="external">DITA-OT website</xref></stentry>
+            </strow>
+        </simpletable>
+        <p>Visit the DITA-OT website see examples of project files in JSON and YAML formats, and for
+            other information on <xref href="https://www.dita-ot.org/dev/topics/using-project-files.html" format="html" scope="external">using project files</xref>.</p>
+    </body>
+</topic>

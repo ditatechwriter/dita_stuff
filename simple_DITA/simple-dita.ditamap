@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
 <map id="simple-dita">
-    <title>Simplifying DITA</title>
+    <title>Simplifying DITA for new writers</title>
     <topicref href="simplifying-dita.dita" keys="simplifying-dita">
         <topicref href="cc_config.dita" keys="cc_config"/>
         <topicref href="framework_setup.dita" keys="framework-setup"/>

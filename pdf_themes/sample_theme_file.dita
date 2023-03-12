@@ -42,6 +42,8 @@
                 guide which, coupled with the sample theme file, are enough to get you started. A
                 knowledge of XSL-FO properties (or at least CSS) would really help but a little
                 trial and error, and practice styling some basic PDF output will prove fruitful.</p>
+        </section>
+        <section id="section_skb_fwx_twb" props="pdf">
             <p>The following videos from the 2022 DITA-OT Day conference explain about the feature's
                 raison d'être.</p>
             <p><object width="560" height="315" data="https://youtu.be/iQHhp9vZCow"

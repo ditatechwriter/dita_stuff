@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
 <map>
-    <title>DITA as code</title>
-    <topicref format="markdown" href="dita-as-code.md" keys="dac">
-        <topicref href="dac.md" format="markdown"/>
-    </topicref>
+    <title>MDITA</title>
     <topicref format="markdown" href="mdita.md" keys="mdita">
         <topicref format="markdown" href="write-review-MDITA.md" keys="write-MDITA">
             <topicref href="mdita_syntax.md" format="markdown" keys="mdita-syntax"/>
