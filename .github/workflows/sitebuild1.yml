@@ -34,4 +34,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: published # The branch the action should deploy to.
           FOLDER: out # The folder the action should deploy.
-          TARGET-FOLDER: web
+          TARGET_FOLDER: web
