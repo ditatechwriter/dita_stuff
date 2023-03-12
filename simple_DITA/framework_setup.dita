@@ -11,13 +11,13 @@
         <p>The first step in defining the new frameworks is to set up the location from which they
             will be shared. I created a GitHub repository call <tt translate="no">tools</tt> and
             added the following directory structure:</p>
-        <pre translate="no">custom_frameworks
+        <codeblock translate="no">custom_frameworks
             - simple_dita
                 - resources
                 - templates
             - simple_ditamap
                 - resources
-                - templates</pre>
+                - templates</codeblock>
         <ul>
             <li>
                 <p><b>custom_frameworks</b> - this folder is the root folder for all custom

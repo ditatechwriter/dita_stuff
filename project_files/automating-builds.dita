@@ -10,7 +10,7 @@
         <p>Then <tt>.properties</tt> files came along and it became a lot easier to do builds because
             you could put most of a document's build parameters in a single file and call it from
             the DITA build command, as in the example below:</p>
-        <pre xml:space="preserve" outputclass="language-bourne">dita -i my_map.ditamap -o out/pdfs --format=pdf2 --filter=my_filter.ditaval --propertyfile=my_build.properties</pre>
+        <codeblock xml:space="preserve" outputclass="language-bourne">dita -i my_map.ditamap -o out/pdfs --format=pdf2 --filter=my_filter.ditaval --propertyfile=my_build.properties</codeblock>
         <p>This made for more concise shell scripts because the build parameters for most documents
             were the same and you could call the same <tt>.properties</tt> file for most of your build
             commands. However, if you required different parameters for a document, you needed a
@@ -24,7 +24,7 @@
                 filters) all in the same file for multiple documents. You can even define multiple
                 outputs with different parameters for the same document.</p>
             <p>Your DITA build command now looks something like this:</p>
-            <pre xml:space="preserve" outputclass="language-bourne">dita --project=myproject.xml -v</pre>
+            <codeblock xml:space="preserve" outputclass="language-bourne">dita --project=myproject.xml -v</codeblock>
             <p>
                 <note>The <tt>-v</tt> switch simply tells the DITA Open Toolkit to use verbose mode
                     and run the log file in the command prompt window.</note>

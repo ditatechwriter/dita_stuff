@@ -16,7 +16,7 @@ HDITA is the HTML5 flavor of LwDITA. Entire topics can be written in HDITA of co
 * **\<li> ** inside **\<ul>** or **\<ol>** - a list item.
 * **\<p>** - a paragraph. Especially important when using context references.
 * **\<span>** - a span of text. Used mostly for key references within notes and context referenced text. 
-* **\<pre>** - to indicate code or teletype text.
+* **\<codeblock>** - to indicate code or teletype text.
 * **\<section>** - To designate a new section in HTML content.
 * **\<a href>** - an anchor tag for links.
 * **\<sub>** - for subscript content.

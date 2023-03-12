@@ -20,7 +20,7 @@
                     href="https://www.dita-ot.org/plugins" format="html" scope="external">DITA-OT
                     plugin registry</xref>. These can be installed most easily using the <tt>dita
                     install</tt> command as in the following excerpt:</p>
-            <pre outputclass="yaml">...
+            <codeblock outputclass="yaml">...
 
 jobs:
   build-dita:
@@ -39,7 +39,7 @@ jobs:
             dita install fox.jason.prismjs</b>
           build:  |
             dita --project=myproject.xml  
-...</pre>
+...</codeblock>
         </section>
         <p>The above example also happens to install <tt>nodejs</tt> and <tt>apt-utils</tt> which
             are dependencies of the <tt>net.infotexture.dita-bootstrap</tt> plugin.</p>
@@ -60,7 +60,7 @@ jobs:
                 archive by passing it as a URL to the <tt>dita install</tt> command.</p>
             <p>The following example installs a plugin from a user (myCompany) repository
                 (DITA-plugins) custom_pdf branch.</p>
-            <pre outputclass="yaml">...
+            <codeblock outputclass="yaml">...
 
 jobs:
   build-dita:
@@ -77,7 +77,7 @@ jobs:
             dita install https://github.com/myCompany/DITA-plugins/archive/custom_pdf.zip</b>
           build:  |
             dita --project=myproject.xml  
-...</pre>
+...</codeblock>
         </section>
     </body>
 </topic>

@@ -22,7 +22,7 @@
         <p>Theme files are YAML files whose key/value pairs represent CSS properties and values (or
             actually XSL-FO properties which are <i>nearly</i> always the same). Once configured,
             the theme file can be applied to the build instruction. For example:</p>
-        <pre translate="no" outputclass="language-bourne">dita -i some.ditamap -o out --format=pdf2 --theme=mytheme.yaml</pre>
+        <codeblock translate="no" outputclass="language-bourne">dita -i some.ditamap -o out --format=pdf2 --theme=mytheme.yaml</codeblock>
         <p>The theme YAML file feeds the theme file parameters to the build-in PDF2 plugin at build
             time with no requirement to actually go in and mess with the XSLT attributes files
             within the PDF2 plugin itself. And although it may not solve all the problems of PDF

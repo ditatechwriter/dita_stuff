@@ -33,7 +33,7 @@
                 will also add a <tt translate="no">&lt;title></tt> and <tt translate="no"
                     >&lt;p></tt> child elements.</p>
         </section>
-        <pre translate="no" outputclass="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?>
+        <codeblock translate="no" outputclass="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?>
 &lt;!-- 
     Allows contributing to the values presented on content completion for element and attribute values.
     You can append to the values obtained from the schema or replace them all together.
@@ -202,6 +202,6 @@
     &lt;/match>
     
 &lt;/config>
-</pre>
+</codeblock>
     </body>
 </topic>

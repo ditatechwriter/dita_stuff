@@ -24,7 +24,7 @@
             more information, see <xref keyref="pdf2-themes"/>). Because of conflicting ditaval
             filter files, there are 2 different contexts for the <i>Grunt Master 3000 Guide</i> -
             one for each output format.</p>
-        <pre xml:space="preserve" outputclass="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+        <codeblock xml:space="preserve" outputclass="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;project xmlns="https://www.dita-ot.org/project"&gt;
 
 &lt;--! Grunt Master 3000 Guide HTML 5 deliverable --&gt;
@@ -72,10 +72,10 @@
     &lt;/publication&gt;
   &lt;/deliverable&gt;
   
-&lt;/project&gt;</pre>
+&lt;/project&gt;</codeblock>
         <p>The GitHub Actions workflow file build section required to produce all three versions
             looks something like this:</p>
-        <pre outputclass="yaml">...
+        <codeblock outputclass="yaml">...
 
 jobs:
   build-dita:
@@ -95,7 +95,7 @@ jobs:
             dita install https://github.com/myCompany/DITA-plugins/archive/custom_pdf.zip
           build:  |
             dita --project=gm_3000.xml  --theme=mytheme.xml
-...</pre>
+...</codeblock>
         <note>The first 3 plugins are used for the HTML5 build. The last for the custom PDF build.
             There is no need to install the PDF2 plugin as it is currently bundled with each DITA
             Open Toolkit release. The theme file is required for the PDF2 build. If not included,

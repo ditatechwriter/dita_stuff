@@ -13,7 +13,7 @@
             <p>The project file syntax also incorporates an &lt;include&gt; element which you can
                 use to chain several project files together and produce all their deliverables in
                 one go. See the following example, <tt>all_deliverables.xml</tt>:</p>
-            <pre xml:space="preserve" outputclass="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+            <codeblock xml:space="preserve" outputclass="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;?xml-model href="https://www.dita-ot.org/rng/project.rnc" type="application/relax-ng-compact-syntax"?&gt;
 
     &lt;project xmlns="https://www.dita-ot.org/project"&gt;
@@ -22,24 +22,24 @@
         &lt;include href="product2_deilverables.xml"/&gt;
         &lt;include href="product3_deilverables.xml"/&gt;
         
-    &lt;/project&gt;        </pre>
+    &lt;/project&gt;        </codeblock>
             <p>The command below therefore would build all the deliverables contained in the
                     <tt>product1_deilverables.xml</tt>, <tt>product2_deilverables.xml</tt>, and
                     <tt>product3_deilverables.xml</tt> project files:</p>
-            <pre xml:space="preserve" outputclass="language-bourne">dita --project=all_deliverables.xml</pre>
+            <codeblock xml:space="preserve" outputclass="language-bourne">dita --project=all_deliverables.xml</codeblock>
         </section>
         <section id="listing-all-the-deliverables-in-a-project-file">
             <title>Listing all the deliverables in a project file </title>
             <p>If a project file contains many deliverables, and especially if it is written in XML,
                 it can be no easy task to find exactly which deliverables it builds. Luckily, there
                 is a command for just for that. For example:</p>
-            <pre xml:space="preserve" outputclass="language-bourne">dita deliverables gm_deliverables.xml</pre>
+            <codeblock xml:space="preserve" outputclass="language-bourne">dita deliverables gm_deliverables.xml</codeblock>
             <p>The DITA <tt>deliverables</tt> command if used on the <tt>gm_deliverables.xml</tt>
                 described in <xref keyref="build-multiple-docs"/> returns each deliverable's ID and
                 name:</p>
-            <pre xml:space="preserve" outputclass="language-bourne">ug_gruntmaster6000_html5 Grunt Master 6000 Guide
+            <codeblock xml:space="preserve" outputclass="language-bourne">ug_gruntmaster6000_html5 Grunt Master 6000 Guide
 ug_gruntmaster3000_html5 Grunt Master 3000 Guide
-ug_gruntmaster3000_pdf   Grunt Master 3000 Guide</pre>
+ug_gruntmaster3000_pdf   Grunt Master 3000 Guide</codeblock>
         </section>
         <section id="building-a-single-deliverable-from-a-project-file">
             <title>Building a single deliverable from a project file </title>
@@ -48,7 +48,7 @@ ug_gruntmaster3000_pdf   Grunt Master 3000 Guide</pre>
                 the <tt>--deliverable</tt> switch with the DITA build command. The following example
                 builds the PDF version of the <i>Grunt Master 3000 Guide</i> listed in the
                     <tt>gm_deliverables.xml</tt> project file:</p>
-            <pre xml:space="preserve" outputclass="language-bourne">dita --project=gm_deliverables.xml --deliverable=ug_gruntmaster3000_pdf</pre>
+            <codeblock xml:space="preserve" outputclass="language-bourne">dita --project=gm_deliverables.xml --deliverable=ug_gruntmaster3000_pdf</codeblock>
             <note>You can also build all (or just one) of the deliverables in a project file you
                 have open in Oxygen by going to
                     <b>Document</b>&gt;<b>Transformation</b>&gt;<b>Configure Transformation
