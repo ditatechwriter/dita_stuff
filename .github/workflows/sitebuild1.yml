@@ -22,7 +22,7 @@ jobs:
             nodejs -v
             dita install fox.jason.extend.css
             dita install net.infotexture.dita-bootstrap
-            dita install fox.jason.prismjs
+            dita install https://github.com/jason-fox/fox.jason.prismjs/archive/master.zip
           build:  |
             dita --project=portfolio-proj.xml --theme=TestPDF-theme.yaml         
       - name: Upload DITA
