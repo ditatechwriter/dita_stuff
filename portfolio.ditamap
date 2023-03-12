@@ -48,5 +48,5 @@
     <chapter href="pdf_themes/pdf_themes.ditamap" format="ditamap" props="html"/>
     <chapter href="project_files/project_files.ditamap" format="ditamap" props="html"
         keys="project-files"/>
-    <chapter href="GA_builds/ga-builds.ditamap" format="ditamap"/>
+    <chapter href="GA_builds/ga-builds.ditamap" format="ditamap" props="html"/>
 </bookmap>

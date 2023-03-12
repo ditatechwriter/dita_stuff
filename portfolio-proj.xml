@@ -5,7 +5,7 @@
     <context name="Portfolio" id="portfolio-html5">
       <input href="portfolio.ditamap"/>
       <profile>
-        <ditaval href="excludePDF.ditaval"/>
+        <ditaval href="excludeHTML.ditaval"/>
       </profile>
     </context>
     <output href="out"/>
@@ -16,7 +16,7 @@
     <context name="Portfolio" id="portfolio-pdf">
       <input href="portfolio.ditamap"/>
       <profile>
-        <ditaval href="excludeHTML.ditaval"/>
+        <ditaval href="excludePDF.ditaval"/>
       </profile>
     </context>
     <output href="out/pdf"/>
