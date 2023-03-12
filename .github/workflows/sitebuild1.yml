@@ -27,10 +27,10 @@ jobs:
         with:
           name: dita-artifact
           path: ‘out’
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@3.7.1
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: published # The branch the action should deploy to.
-          FOLDER: out # The folder the action should deploy.
-          TARGET-FOLDER: web
+          folder: out # The folder the action should deploy.
+          token: $
+          branch: published # The branch the action should deploy to.
+          target-folder: web
