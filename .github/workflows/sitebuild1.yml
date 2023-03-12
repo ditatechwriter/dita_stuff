@@ -19,7 +19,6 @@ jobs:
           install: |
             dita install fox.jason.extend.css
             dita install net.infotexture.dita-bootstrap
-            dita install fox.jason.prismjs
           build:  |
             dita --project=portfolio-proj.xml --theme=TestPDF-theme.yaml         
       - name: Upload DITA
