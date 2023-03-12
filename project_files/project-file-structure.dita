@@ -7,7 +7,7 @@
         <p>A DITA project file is an XML file containing build parameters for one or more documents
             that you can pass to the <tt>dita</tt> build command.</p>
         <p>The following is a sample project file in XML format:</p>
-        <pre xml:space="preserve" outputclass="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+        <pre xml:space="preserve" outputclass="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;project xmlns="https://www.dita-ot.org/project"&gt;
   
   &lt;deliverable name="Grunt Master 6000 Guide" id="ug_gruntmaster6000_html5"&gt; 

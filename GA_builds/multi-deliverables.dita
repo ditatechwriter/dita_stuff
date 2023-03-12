@@ -24,7 +24,7 @@
             more information, see <xref keyref="pdf2-themes"/>). Because of conflicting ditaval
             filter files, there are 2 different contexts for the <i>Grunt Master 3000 Guide</i> -
             one for each output format.</p>
-        <pre xml:space="preserve" outputclass="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+        <pre xml:space="preserve" outputclass="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;project xmlns="https://www.dita-ot.org/project"&gt;
 
 &lt;--! Grunt Master 3000 Guide HTML 5 deliverable --&gt;

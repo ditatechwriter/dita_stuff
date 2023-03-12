@@ -13,7 +13,7 @@
             <p>The project file syntax also incorporates an &lt;include&gt; element which you can
                 use to chain several project files together and produce all their deliverables in
                 one go. See the following example, <tt>all_deliverables.xml</tt>:</p>
-            <pre xml:space="preserve" outputclass="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+            <pre xml:space="preserve" outputclass="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;?xml-model href="https://www.dita-ot.org/rng/project.rnc" type="application/relax-ng-compact-syntax"?&gt;
 
     &lt;project xmlns="https://www.dita-ot.org/project"&gt;
