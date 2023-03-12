@@ -46,26 +46,26 @@
                 other community developed plugins are available via the <a class="xref" href="https://www.dita-ot.org/plugins" target="_blank" rel="external noopener">DITA-OT
                     plugin registry</a>. These can be installed most easily using the <span class="ph tt" style="font-family: monospace">dita
                     install</span> command as in the following excerpt:</p>
-            <pre class="pre border rounded yaml">...
+            <pre class="pre codeblock border rounded language-yaml"><code><span class="ph token punctuation">...</span>
 
-jobs:
-  build-dita:
-    name: Build DITA
-    runs-on: ubuntu-latest
-    steps:
-      - name: Git checkout
-        uses: actions/checkout@v2
-      - name: Build HTML5
-        id: DITA-build
-        uses: dita-ot/dita-build-action@master
-        with:
-          <strong class="ph b">install: |
+<span class="ph token key atrule">jobs</span><span class="ph token punctuation">:</span>
+  <span class="ph token key atrule">build-dita</span><span class="ph token punctuation">:</span>
+    <span class="ph token key atrule">name</span><span class="ph token punctuation">:</span> Build DITA
+    <span class="ph token key atrule">runs-on</span><span class="ph token punctuation">:</span> ubuntu<span class="ph token punctuation">-</span>latest
+    <span class="ph token key atrule">steps</span><span class="ph token punctuation">:</span>
+      <span class="ph token punctuation">-</span> <span class="ph token key atrule">name</span><span class="ph token punctuation">:</span> Git checkout
+        <span class="ph token key atrule">uses</span><span class="ph token punctuation">:</span> actions/checkout@v2
+      <span class="ph token punctuation">-</span> <span class="ph token key atrule">name</span><span class="ph token punctuation">:</span> Build HTML5
+        <span class="ph token key atrule">id</span><span class="ph token punctuation">:</span> DITA<span class="ph token punctuation">-</span>build
+        <span class="ph token key atrule">uses</span><span class="ph token punctuation">:</span> dita<span class="ph token punctuation">-</span>ot/dita<span class="ph token punctuation">-</span>build<span class="ph token punctuation">-</span>action@master
+        <span class="ph token key atrule">with</span><span class="ph token punctuation">:</span>
+          <strong class="ph b"><span class="ph token key atrule">install</span><span class="ph token punctuation">:</span> <span class="ph token punctuation">|</span><span class="ph token scalar string">
             dita install fox.jason.extend.css
             dita install net.infotexture.dita-bootstrap
-            dita install fox.jason.prismjs</strong>
-          build:  |
-            dita --project=myproject.xml  
-...</pre>
+            dita install fox.jason.prismjs</span></strong>
+          <span class="ph token key atrule">build</span><span class="ph token punctuation">:</span>  <span class="ph token punctuation">|</span><span class="ph token scalar string">
+            dita --project=myproject.xml  </span>
+<span class="ph token punctuation">...</span></code></pre>
         </section>
         <p class="p">The above example also happens to install <span class="ph tt" style="font-family: monospace">nodejs</span> and <span class="ph tt" style="font-family: monospace">apt-utils</span> which
             are dependencies of the <span class="ph tt" style="font-family: monospace">net.infotexture.dita-bootstrap</span> plugin.</p>
@@ -84,24 +84,24 @@ jobs:
                 archive by passing it as a URL to the <span class="ph tt" style="font-family: monospace">dita install</span> command.</p>
             <p class="p">The following example installs a plugin from a user (myCompany) repository
                 (DITA-plugins) custom_pdf branch.</p>
-            <pre class="pre border rounded yaml">...
+            <pre class="pre codeblock border rounded language-yaml"><code><span class="ph token punctuation">...</span>
 
-jobs:
-  build-dita:
-    name: Build DITA
-    runs-on: ubuntu-latest
-    steps:
-      - name: Git checkout
-        uses: actions/checkout@v2
-      - name: Build Custom PDF
-        id: DITA-build
-        uses: dita-ot/dita-build-action@master
-        with:
-          <strong class="ph b">install: |
-            dita install https://github.com/myCompany/DITA-plugins/archive/custom_pdf.zip</strong>
-          build:  |
-            dita --project=myproject.xml  
-...</pre>
+<span class="ph token key atrule">jobs</span><span class="ph token punctuation">:</span>
+  <span class="ph token key atrule">build-dita</span><span class="ph token punctuation">:</span>
+    <span class="ph token key atrule">name</span><span class="ph token punctuation">:</span> Build DITA
+    <span class="ph token key atrule">runs-on</span><span class="ph token punctuation">:</span> ubuntu<span class="ph token punctuation">-</span>latest
+    <span class="ph token key atrule">steps</span><span class="ph token punctuation">:</span>
+      <span class="ph token punctuation">-</span> <span class="ph token key atrule">name</span><span class="ph token punctuation">:</span> Git checkout
+        <span class="ph token key atrule">uses</span><span class="ph token punctuation">:</span> actions/checkout@v2
+      <span class="ph token punctuation">-</span> <span class="ph token key atrule">name</span><span class="ph token punctuation">:</span> Build Custom PDF
+        <span class="ph token key atrule">id</span><span class="ph token punctuation">:</span> DITA<span class="ph token punctuation">-</span>build
+        <span class="ph token key atrule">uses</span><span class="ph token punctuation">:</span> dita<span class="ph token punctuation">-</span>ot/dita<span class="ph token punctuation">-</span>build<span class="ph token punctuation">-</span>action@master
+        <span class="ph token key atrule">with</span><span class="ph token punctuation">:</span>
+          <strong class="ph b"><span class="ph token key atrule">install</span><span class="ph token punctuation">:</span> <span class="ph token punctuation">|</span><span class="ph token scalar string">
+            dita install https://github.com/myCompany/DITA-plugins/archive/custom_pdf.zip</span></strong>
+          <span class="ph token key atrule">build</span><span class="ph token punctuation">:</span>  <span class="ph token punctuation">|</span><span class="ph token scalar string">
+            dita --project=myproject.xml  </span>
+<span class="ph token punctuation">...</span></code></pre>
         </section>
     </div>
 <nav role="navigation" class="related-links"><div class="familylinks"><div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="../GA_builds/GA-build.html" title="GitHub Actions are a quick and easy way to automate build outputs form DITA content stored in a GitHub repository.">DITA CICD with GitHub Actions</a></div></div></nav></article></main></div></body></html>

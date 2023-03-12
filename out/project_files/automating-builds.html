@@ -40,7 +40,7 @@
         <p class="p">Then <span class="ph tt" style="font-family: monospace">.properties</span> files came along and it became a lot easier to do builds because
             you could put most of a document's build parameters in a single file and call it from
             the DITA build command, as in the example below:</p>
-        <pre class="pre border rounded language-bourne">dita -i my_map.ditamap -o out/pdfs --format=pdf2 --filter=my_filter.ditaval --propertyfile=my_build.properties</pre>
+        <pre class="pre codeblock border rounded language-bourne"><code>dita -i my_map.ditamap -o out/pdfs --format=pdf2 --filter=my_filter.ditaval --propertyfile=my_build.properties</code></pre>
         <p class="p">This made for more concise shell scripts because the build parameters for most documents
             were the same and you could call the same <span class="ph tt" style="font-family: monospace">.properties</span> file for most of your build
             commands. However, if you required different parameters for a document, you needed a
@@ -54,7 +54,7 @@
                 filters) all in the same file for multiple documents. You can even define multiple
                 outputs with different parameters for the same document.</p>
             <p class="p">Your DITA build command now looks something like this:</p>
-            <pre class="pre border rounded language-bourne">dita --project=myproject.xml -v</pre>
+            <pre class="pre codeblock border rounded language-bourne"><code>dita --project=myproject.xml -v</code></pre>
             <div class="p">
                 <div role="alert" class="note alert alert-info"><span class="note__title">Note:</span> The <span class="ph tt" style="font-family: monospace">-v</span> switch simply tells the DITA Open Toolkit to use verbose mode
                     and run the log file in the command prompt window.</div>

@@ -37,24 +37,24 @@
         <p class="p">A DITA project file is an XML file containing build parameters for one or more documents
             that you can pass to the <span class="ph tt" style="font-family: monospace">dita</span> build command.</p>
         <p class="p">The following is a sample project file in XML format:</p>
-        <pre class="pre border rounded language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;project xmlns="https://www.dita-ot.org/project"&gt;
+        <pre class="pre codeblock border rounded language-xml"><code><span class="ph token prolog">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>project</span> <span class="ph token attr-name">xmlns</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>https://www.dita-ot.org/project<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
   
-  &lt;deliverable name="Grunt Master 6000 Guide" id="ug_gruntmaster6000_html5"&gt; 
-    &lt;context name="Grunt Master 6000 Guide" id="ug_gruntmaster6000"&gt;
-        &lt;input href="ug_gruntmaster6000.ditamap"/&gt;
-        &lt;profile&gt;
-            &lt;ditaval href="GM6000.ditaval"/&gt;
-        &lt;/profile&gt;
-    &lt;/context&gt;
-    &lt;output href="out"/&gt;
-    &lt;publication transtype="html5"&gt;
-        &lt;param name="args.css" href="../css/custom.css"/&gt;
-        &lt;param name="args.copycss" value="yes"/&gt;
-    &lt;/publication&gt;
-  &lt;/deliverable&gt;
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>deliverable</span> <span class="ph token attr-name">name</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>Grunt Master 6000 Guide<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">id</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>ug_gruntmaster6000_html5<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span> 
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>context</span> <span class="ph token attr-name">name</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>Grunt Master 6000 Guide<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">id</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>ug_gruntmaster6000<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+        <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>input</span> <span class="ph token attr-name">href</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>ug_gruntmaster6000.ditamap<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+        <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>profile</span><span class="ph token punctuation">&gt;</span></span>
+            <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ditaval</span> <span class="ph token attr-name">href</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>GM6000.ditaval<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+        <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>profile</span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>context</span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>output</span> <span class="ph token attr-name">href</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>out<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>publication</span> <span class="ph token attr-name">transtype</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>html5<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+        <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>param</span> <span class="ph token attr-name">name</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>args.css<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">href</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>../css/custom.css<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+        <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>param</span> <span class="ph token attr-name">name</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>args.copycss<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">value</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>yes<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>publication</span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>deliverable</span><span class="ph token punctuation">&gt;</span></span>
   
-&lt;/project&gt;</pre>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>project</span><span class="ph token punctuation">&gt;</span></span></code></pre>
         <table class="simpletable"><colgroup><col style="width:17.123287671232877%"><col style="width:82.87671232876713%"></colgroup><thead><tr class="sthead">
                 <th class="stentry" scope="col" id="dita-ot-project-file-structure__stentry__1">Element</th>
                 <th class="stentry" scope="col" id="dita-ot-project-file-structure__stentry__2">Description</th>

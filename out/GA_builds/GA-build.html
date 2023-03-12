@@ -41,46 +41,46 @@
             manually from GitHub but, as you can see in the code snippet below, you can also set it
             start builds on push or on pull_requests to a certain branch. It is also possible to
             configure a cron job to run the build at a specific time.</p>
-        <pre class="pre border rounded yaml">name: site-build
+        <pre class="pre codeblock border rounded language-yaml"><code><span class="ph token key atrule">name</span><span class="ph token punctuation">:</span> site<span class="ph token punctuation">-</span>build
 
-# Controls when the action will run. 
-on:
+<span class="ph token comment"># Controls when the action will run. </span>
+<span class="ph token key atrule">on</span><span class="ph token punctuation">:</span>
 
-  # Triggers the workflow on push events but only for the main branch
-  push:
-    branches: [ main ]
+  <span class="ph token comment"># Triggers the workflow on push events but only for the main branch</span>
+  <span class="ph token key atrule">push</span><span class="ph token punctuation">:</span>
+    <span class="ph token key atrule">branches</span><span class="ph token punctuation">:</span> <span class="ph token punctuation">[</span> main <span class="ph token punctuation">]</span>
 
-jobs:
-  build-dita:
-    name: Build DITA
-    runs-on: ubuntu-latest
-    steps:
-      - name: Git checkout
-        uses: actions/checkout@v2
-      - name: Build HTML5
-        id: DITA-build
-        uses: dita-ot/dita-build-action@master
-        with:
-          install: |
+<span class="ph token key atrule">jobs</span><span class="ph token punctuation">:</span>
+  <span class="ph token key atrule">build-dita</span><span class="ph token punctuation">:</span>
+    <span class="ph token key atrule">name</span><span class="ph token punctuation">:</span> Build DITA
+    <span class="ph token key atrule">runs-on</span><span class="ph token punctuation">:</span> ubuntu<span class="ph token punctuation">-</span>latest
+    <span class="ph token key atrule">steps</span><span class="ph token punctuation">:</span>
+      <span class="ph token punctuation">-</span> <span class="ph token key atrule">name</span><span class="ph token punctuation">:</span> Git checkout
+        <span class="ph token key atrule">uses</span><span class="ph token punctuation">:</span> actions/checkout@v2
+      <span class="ph token punctuation">-</span> <span class="ph token key atrule">name</span><span class="ph token punctuation">:</span> Build HTML5
+        <span class="ph token key atrule">id</span><span class="ph token punctuation">:</span> DITA<span class="ph token punctuation">-</span>build
+        <span class="ph token key atrule">uses</span><span class="ph token punctuation">:</span> dita<span class="ph token punctuation">-</span>ot/dita<span class="ph token punctuation">-</span>build<span class="ph token punctuation">-</span>action@master
+        <span class="ph token key atrule">with</span><span class="ph token punctuation">:</span>
+          <span class="ph token key atrule">install</span><span class="ph token punctuation">:</span> <span class="ph token punctuation">|</span><span class="ph token scalar string">
             dita install fox.jason.extend.css
             dita install net.infotexture.dita-bootstrap
-            dita install fox.jason.prismjs
-          build:  |
-            dita --project=myproject.xml          
-      - name: Upload DITA
-        id: upload
-        uses: actions/upload-artifact@v2
-        with:
-          name: dita-artifact
-          path: ‘out’
-      - name: Deploy
-        id: deploy
-        uses: JamesIves/github-pages-deploy-action@3.7.1
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: published # The branch the action should deploy to.
-          FOLDER: out # The folder the action should deploy.
-          TARGET-FOLDER: docs          </pre>
+            dita install fox.jason.prismjs</span>
+          <span class="ph token key atrule">build</span><span class="ph token punctuation">:</span>  <span class="ph token punctuation">|</span><span class="ph token scalar string">
+            dita --project=myproject.xml          </span>
+      <span class="ph token punctuation">-</span> <span class="ph token key atrule">name</span><span class="ph token punctuation">:</span> Upload DITA
+        <span class="ph token key atrule">id</span><span class="ph token punctuation">:</span> upload
+        <span class="ph token key atrule">uses</span><span class="ph token punctuation">:</span> actions/upload<span class="ph token punctuation">-</span>artifact@v2
+        <span class="ph token key atrule">with</span><span class="ph token punctuation">:</span>
+          <span class="ph token key atrule">name</span><span class="ph token punctuation">:</span> dita<span class="ph token punctuation">-</span>artifact
+          <span class="ph token key atrule">path</span><span class="ph token punctuation">:</span> ‘out’
+      <span class="ph token punctuation">-</span> <span class="ph token key atrule">name</span><span class="ph token punctuation">:</span> Deploy
+        <span class="ph token key atrule">id</span><span class="ph token punctuation">:</span> deploy
+        <span class="ph token key atrule">uses</span><span class="ph token punctuation">:</span> JamesIves/github<span class="ph token punctuation">-</span>pages<span class="ph token punctuation">-</span>deploy<span class="ph token punctuation">-</span>action@3.7.1
+        <span class="ph token key atrule">with</span><span class="ph token punctuation">:</span>
+          <span class="ph token key atrule">GITHUB_TOKEN</span><span class="ph token punctuation">:</span> $<span class="ph token punctuation">{</span><span class="ph token punctuation">{</span> secrets.GITHUB_TOKEN <span class="ph token punctuation">}</span><span class="ph token punctuation">}</span>
+          <span class="ph token key atrule">BRANCH</span><span class="ph token punctuation">:</span> published <span class="ph token comment"># The branch the action should deploy to.</span>
+          <span class="ph token key atrule">FOLDER</span><span class="ph token punctuation">:</span> out <span class="ph token comment"># The folder the action should deploy.</span>
+          <span class="ph token key atrule">TARGET-FOLDER</span><span class="ph token punctuation">:</span> docs          </code></pre>
     <p class="p">The <span class="ph tt" style="font-family: monospace">jobs</span> section of the workflow file spins up an Ubuntu Linux instance and then
       runs a series of steps:</p>
     <ol class="ol">
@@ -114,27 +114,27 @@ jobs:
         testing builds, it's easier to run builds manually. Adding the <span class="ph tt" style="font-family: monospace">workflow_dispatch</span>
         event trigger to your workflow file allows you to build manually by clicking <strong class="ph b">Run
           workflow</strong> on the <strong class="ph b">Actions</strong> tab in the GitHub UI.</p>
-      <pre class="pre border rounded yaml">name: site-build
+      <pre class="pre codeblock border rounded language-yaml"><code><span class="ph token key atrule">name</span><span class="ph token punctuation">:</span> site<span class="ph token punctuation">-</span>build
 
-on:
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+<span class="ph token key atrule">on</span><span class="ph token punctuation">:</span>
+  <span class="ph token comment"># Allows you to run this workflow manually from the Actions tab</span>
+  <span class="ph token key atrule">workflow_dispatch</span><span class="ph token punctuation">:</span>
 
-...</pre>
+<span class="ph token punctuation">...</span></code></pre>
     </section>
     <section class="section" id="building-output-with-github-actions__section_tcs_5pc_5wb"><h2 class="title h4 text-secondary">Timed builds with cron</h2>
       
       <p class="p">In a mature CI/CD docs environment, documentation can be built and deployed on a regular,
         perhaps daily, basis. Workflows can integrate cron jobs that kick off the builds on
         specified days and times. The example below runs the build every weekday night at 2am:</p>
-      <pre class="pre border rounded yaml">name: site-build
+      <pre class="pre codeblock border rounded language-yaml"><code><span class="ph token key atrule">name</span><span class="ph token punctuation">:</span> site<span class="ph token punctuation">-</span>build
 
-on:
-  schedule:
-    # Runs "at 02:00 every Mon-Fri"
-    - cron: '* 2 * * 1-5'
+<span class="ph token key atrule">on</span><span class="ph token punctuation">:</span>
+  <span class="ph token key atrule">schedule</span><span class="ph token punctuation">:</span>
+    <span class="ph token comment"># Runs "at 02:00 every Mon-Fri"</span>
+    <span class="ph token punctuation">-</span> <span class="ph token key atrule">cron</span><span class="ph token punctuation">:</span> <span class="ph token string">'* 2 * * 1-5'</span>
 
-...</pre>
+<span class="ph token punctuation">...</span></code></pre>
       <div role="alert" class="note alert alert-info"><span class="note__title">Note:</span> For help with cron notation, <a class="xref" href="https://crontab.guru/" target="_blank" rel="external noopener">https://crontab.guru/</a> is useful resource.</div>
     </section>
     </div>

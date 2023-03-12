@@ -55,78 +55,78 @@
             more information, see <a class="xref" href="../pdf_themes/pdf2_themes.html">PDF2 theme files</a>). Because of conflicting ditaval
             filter files, there are 2 different contexts for the <em class="ph i">Grunt Master 3000 Guide</em> -
             one for each output format.</p>
-        <pre class="pre border rounded language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;project xmlns="https://www.dita-ot.org/project"&gt;
+        <pre class="pre codeblock border rounded language-xml"><code><span class="ph token prolog">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>project</span> <span class="ph token attr-name">xmlns</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>https://www.dita-ot.org/project<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
 
-&lt;--! Grunt Master 3000 Guide HTML 5 deliverable --&gt;
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>--!</span> <span class="ph token attr-name">Grunt</span> <span class="ph token attr-name">Master</span> <span class="ph token attr-name">3000</span> <span class="ph token attr-name">Guide</span> <span class="ph token attr-name">HTML</span> <span class="ph token attr-name">5</span> <span class="ph token attr-name">deliverable</span> <span class="ph token attr-name">--</span><span class="ph token punctuation">&gt;</span></span>
 
-  &lt;context name="Grunt Master 3000 Guide" id="html5_ug_gruntmaster3000"&gt;
-    &lt;input href="ug_gruntmaster3000.ditamap"/&gt;
-    &lt;profile&gt;
-      &lt;ditaval href="exclude_pdfonly.ditaval"/&gt;
-    &lt;/profile&gt;
-  &lt;/context&gt;
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>context</span> <span class="ph token attr-name">name</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>Grunt Master 3000 Guide<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">id</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>html5_ug_gruntmaster3000<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>input</span> <span class="ph token attr-name">href</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>ug_gruntmaster3000.ditamap<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>profile</span><span class="ph token punctuation">&gt;</span></span>
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ditaval</span> <span class="ph token attr-name">href</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>exclude_pdfonly.ditaval<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>profile</span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>context</span><span class="ph token punctuation">&gt;</span></span>
   
-  &lt;deliverable name="Grunt Master 3000 Guide" id="ug_gruntmaster3000_html5"&gt;
-    &lt;context idref="html5_ug_gruntmaster3000"/&gt;
-    &lt;output href="./html5-output"/&gt;
-    &lt;publication transtype="html5"&gt;
-      &lt;param name="args.css" href="../css/custom.css"/&gt;
-      &lt;param name="args.copycss" value="yes"/&gt;
-    &lt;/publication&gt;
-  &lt;/deliverable&gt;
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>deliverable</span> <span class="ph token attr-name">name</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>Grunt Master 3000 Guide<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">id</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>ug_gruntmaster3000_html5<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>context</span> <span class="ph token attr-name">idref</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>html5_ug_gruntmaster3000<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>output</span> <span class="ph token attr-name">href</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>./html5-output<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>publication</span> <span class="ph token attr-name">transtype</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>html5<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>param</span> <span class="ph token attr-name">name</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>args.css<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">href</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>../css/custom.css<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>param</span> <span class="ph token attr-name">name</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>args.copycss<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">value</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>yes<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>publication</span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>deliverable</span><span class="ph token punctuation">&gt;</span></span>
 
-&lt;--! Grunt Master 3000 Guide PDF deliverables --&gt;
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>--!</span> <span class="ph token attr-name">Grunt</span> <span class="ph token attr-name">Master</span> <span class="ph token attr-name">3000</span> <span class="ph token attr-name">Guide</span> <span class="ph token attr-name">PDF</span> <span class="ph token attr-name">deliverables</span> <span class="ph token attr-name">--</span><span class="ph token punctuation">&gt;</span></span>
 
-  &lt;context name="Grunt Master 3000 Guide" id="pdf_ug_gruntmaster3000"&gt;
-    &lt;input href="ug_gruntmaster3000.ditamap"/&gt;
-    &lt;profile&gt;
-      &lt;ditaval href="exclude_html5only.ditaval"/&gt;
-    &lt;/profile&gt;
-  &lt;/context&gt;
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>context</span> <span class="ph token attr-name">name</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>Grunt Master 3000 Guide<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">id</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>pdf_ug_gruntmaster3000<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>input</span> <span class="ph token attr-name">href</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>ug_gruntmaster3000.ditamap<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>profile</span><span class="ph token punctuation">&gt;</span></span>
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>ditaval</span> <span class="ph token attr-name">href</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>exclude_html5only.ditaval<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>profile</span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>context</span><span class="ph token punctuation">&gt;</span></span>
 
- &lt;deliverable name="Grunt Master 3000 Guide" id="ug_gruntmaster3000_custpdf"&gt;
-    &lt;context idref="pdf_ug_gruntmaster3000"/&gt;
-    &lt;output href="./pdf-output"/&gt;
-    &lt;publication transtype="custom_pdf"&gt;
-      &lt;param name="args.chapter.layout" href="BASIC"/&gt;
-      &lt;param name="outputFile.base" value="Grunt Master 3000 Guide"/&gt;
-    &lt;/publication&gt;
-  &lt;/deliverable&gt;
+ <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>deliverable</span> <span class="ph token attr-name">name</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>Grunt Master 3000 Guide<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">id</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>ug_gruntmaster3000_custpdf<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>context</span> <span class="ph token attr-name">idref</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>pdf_ug_gruntmaster3000<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>output</span> <span class="ph token attr-name">href</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>./pdf-output<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>publication</span> <span class="ph token attr-name">transtype</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>custom_pdf<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>param</span> <span class="ph token attr-name">name</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>args.chapter.layout<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">href</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>BASIC<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>param</span> <span class="ph token attr-name">name</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>outputFile.base<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">value</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>Grunt Master 3000 Guide<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>publication</span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>deliverable</span><span class="ph token punctuation">&gt;</span></span>
 
- &lt;deliverable name="Grunt Master 3000 Guide" id="ug_gruntmaster3000_pdf"&gt;
-    &lt;context idref="pdf_ug_gruntmaster3000"/&gt;
-    &lt;output href="./pdf-output"/&gt;
-    &lt;publication transtype="pdf2"&gt;
-      &lt;param name="args.chapter.layout" href="BASIC"/&gt;
-      &lt;param name="outputFile.base" value="Grunt Master 3000 Guide"/&gt;
-    &lt;/publication&gt;
-  &lt;/deliverable&gt;
+ <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>deliverable</span> <span class="ph token attr-name">name</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>Grunt Master 3000 Guide<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">id</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>ug_gruntmaster3000_pdf<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>context</span> <span class="ph token attr-name">idref</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>pdf_ug_gruntmaster3000<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>output</span> <span class="ph token attr-name">href</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>./pdf-output<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>publication</span> <span class="ph token attr-name">transtype</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>pdf2<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>param</span> <span class="ph token attr-name">name</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>args.chapter.layout<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">href</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>BASIC<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+      <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>param</span> <span class="ph token attr-name">name</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>outputFile.base<span class="ph token punctuation">"</span></span> <span class="ph token attr-name">value</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>Grunt Master 3000 Guide<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>publication</span><span class="ph token punctuation">&gt;</span></span>
+  <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>deliverable</span><span class="ph token punctuation">&gt;</span></span>
   
-&lt;/project&gt;</pre>
+<span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>project</span><span class="ph token punctuation">&gt;</span></span></code></pre>
         <p class="p">The GitHub Actions workflow file build section required to produce all three versions
             looks something like this:</p>
-        <pre class="pre border rounded yaml">...
+        <pre class="pre codeblock border rounded language-yaml"><code><span class="ph token punctuation">...</span>
 
-jobs:
-  build-dita:
-    name: Build DITA
-    runs-on: ubuntu-latest
-    steps:
-      - name: Git checkout
-        uses: actions/checkout@v2
-      - name: Build HTML5
-        id: DITA-build
-        uses: dita-ot/dita-build-action@master
-        with:
-          install: |
+<span class="ph token key atrule">jobs</span><span class="ph token punctuation">:</span>
+  <span class="ph token key atrule">build-dita</span><span class="ph token punctuation">:</span>
+    <span class="ph token key atrule">name</span><span class="ph token punctuation">:</span> Build DITA
+    <span class="ph token key atrule">runs-on</span><span class="ph token punctuation">:</span> ubuntu<span class="ph token punctuation">-</span>latest
+    <span class="ph token key atrule">steps</span><span class="ph token punctuation">:</span>
+      <span class="ph token punctuation">-</span> <span class="ph token key atrule">name</span><span class="ph token punctuation">:</span> Git checkout
+        <span class="ph token key atrule">uses</span><span class="ph token punctuation">:</span> actions/checkout@v2
+      <span class="ph token punctuation">-</span> <span class="ph token key atrule">name</span><span class="ph token punctuation">:</span> Build HTML5
+        <span class="ph token key atrule">id</span><span class="ph token punctuation">:</span> DITA<span class="ph token punctuation">-</span>build
+        <span class="ph token key atrule">uses</span><span class="ph token punctuation">:</span> dita<span class="ph token punctuation">-</span>ot/dita<span class="ph token punctuation">-</span>build<span class="ph token punctuation">-</span>action@master
+        <span class="ph token key atrule">with</span><span class="ph token punctuation">:</span>
+          <span class="ph token key atrule">install</span><span class="ph token punctuation">:</span> <span class="ph token punctuation">|</span><span class="ph token scalar string">
             dita install fox.jason.extend.css
             dita install net.infotexture.dita-bootstrap
             dita install fox.jason.prismjs
-            dita install https://github.com/myCompany/DITA-plugins/archive/custom_pdf.zip
-          build:  |
-            dita --project=gm_3000.xml  --theme=mytheme.xml
-...</pre>
+            dita install https://github.com/myCompany/DITA-plugins/archive/custom_pdf.zip</span>
+          <span class="ph token key atrule">build</span><span class="ph token punctuation">:</span>  <span class="ph token punctuation">|</span><span class="ph token scalar string">
+            dita --project=gm_3000.xml  --theme=mytheme.xml</span>
+<span class="ph token punctuation">...</span></code></pre>
         <div role="alert" class="note alert alert-info"><span class="note__title">Note:</span> The first 3 plugins are used for the HTML5 build. The last for the custom PDF build.
             There is no need to install the PDF2 plugin as it is currently bundled with each DITA
             Open Toolkit release. The theme file is required for the PDF2 build. If not included,

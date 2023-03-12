@@ -43,33 +43,33 @@
             <p class="p">The project file syntax also incorporates an &lt;include&gt; element which you can
                 use to chain several project files together and produce all their deliverables in
                 one go. See the following example, <span class="ph tt" style="font-family: monospace">all_deliverables.xml</span>:</p>
-            <pre class="pre border rounded language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;?xml-model href="https://www.dita-ot.org/rng/project.rnc" type="application/relax-ng-compact-syntax"?&gt;
+            <pre class="pre codeblock border rounded language-xml"><code><span class="ph token prolog">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="ph token prolog">&lt;?xml-model href="https://www.dita-ot.org/rng/project.rnc" type="application/relax-ng-compact-syntax"?&gt;</span>
 
-    &lt;project xmlns="https://www.dita-ot.org/project"&gt;
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>project</span> <span class="ph token attr-name">xmlns</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>https://www.dita-ot.org/project<span class="ph token punctuation">"</span></span><span class="ph token punctuation">&gt;</span></span>
     
-        &lt;include href="product1_deilverables.xml"/&gt;
-        &lt;include href="product2_deilverables.xml"/&gt;
-        &lt;include href="product3_deilverables.xml"/&gt;
+        <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>include</span> <span class="ph token attr-name">href</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>product1_deilverables.xml<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+        <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>include</span> <span class="ph token attr-name">href</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>product2_deilverables.xml<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
+        <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;</span>include</span> <span class="ph token attr-name">href</span><span class="ph token attr-value"><span class="ph token punctuation">=</span><span class="ph token punctuation">"</span>product3_deilverables.xml<span class="ph token punctuation">"</span></span><span class="ph token punctuation">/&gt;</span></span>
         
-    &lt;/project&gt;        </pre>
+    <span class="ph token tag"><span class="ph token tag"><span class="ph token punctuation">&lt;/</span>project</span><span class="ph token punctuation">&gt;</span></span>        </code></pre>
             <p class="p">The command below therefore would build all the deliverables contained in the
                     <span class="ph tt" style="font-family: monospace">product1_deilverables.xml</span>, <span class="ph tt" style="font-family: monospace">product2_deilverables.xml</span>, and
                     <span class="ph tt" style="font-family: monospace">product3_deilverables.xml</span> project files:</p>
-            <pre class="pre border rounded language-bourne">dita --project=all_deliverables.xml</pre>
+            <pre class="pre codeblock border rounded language-bourne"><code>dita --project=all_deliverables.xml</code></pre>
         </section>
         <section class="section" id="other-things-you-can-do-with-project-files__listing-all-the-deliverables-in-a-project-file"><h2 class="title h4 text-secondary">Listing all the deliverables in a project file </h2>
             
             <p class="p">If a project file contains many deliverables, and especially if it is written in XML,
                 it can be no easy task to find exactly which deliverables it builds. Luckily, there
                 is a command for just for that. For example:</p>
-            <pre class="pre border rounded language-bourne">dita deliverables gm_deliverables.xml</pre>
+            <pre class="pre codeblock border rounded language-bourne"><code>dita deliverables gm_deliverables.xml</code></pre>
             <p class="p">The DITA <span class="ph tt" style="font-family: monospace">deliverables</span> command if used on the <span class="ph tt" style="font-family: monospace">gm_deliverables.xml</span>
                 described in <a class="xref" href="build-multiple-docs.html">Building multiple documents</a> returns each deliverable's ID and
                 name:</p>
-            <pre class="pre border rounded language-bourne">ug_gruntmaster6000_html5 Grunt Master 6000 Guide
+            <pre class="pre codeblock border rounded language-bourne"><code>ug_gruntmaster6000_html5 Grunt Master 6000 Guide
 ug_gruntmaster3000_html5 Grunt Master 3000 Guide
-ug_gruntmaster3000_pdf   Grunt Master 3000 Guide</pre>
+ug_gruntmaster3000_pdf   Grunt Master 3000 Guide</code></pre>
         </section>
         <section class="section" id="other-things-you-can-do-with-project-files__building-a-single-deliverable-from-a-project-file"><h2 class="title h4 text-secondary">Building a single deliverable from a project file </h2>
             
@@ -78,7 +78,7 @@ ug_gruntmaster3000_pdf   Grunt Master 3000 Guide</pre>
                 the <span class="ph tt" style="font-family: monospace">--deliverable</span> switch with the DITA build command. The following example
                 builds the PDF version of the <em class="ph i">Grunt Master 3000 Guide</em> listed in the
                     <span class="ph tt" style="font-family: monospace">gm_deliverables.xml</span> project file:</p>
-            <pre class="pre border rounded language-bourne">dita --project=gm_deliverables.xml --deliverable=ug_gruntmaster3000_pdf</pre>
+            <pre class="pre codeblock border rounded language-bourne"><code>dita --project=gm_deliverables.xml --deliverable=ug_gruntmaster3000_pdf</code></pre>
             <div role="alert" class="note alert alert-info"><span class="note__title">Note:</span> You can also build all (or just one) of the deliverables in a project file you
                 have open in Oxygen by going to
                     <strong class="ph b">Document</strong>&gt;<strong class="ph b">Transformation</strong>&gt;<strong class="ph b">Configure Transformation
