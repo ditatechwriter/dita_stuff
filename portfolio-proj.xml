@@ -9,10 +9,15 @@
       </profile>
     </context>
     <output href="out"/>
-    <publication transtype="html5-bootstrap"/>
+    <publication transtype="html5-bootstrap">
+      <param name="nav-toc" value="collapsible"/>
+      <param name="args.breadcrumbs" value="yes"/>
+      <param name="args.hide.parent.link" value="yes"/>
+      <param name="args.rellinks" value="none"/>
+    </publication>
   </deliverable>
   
-  <deliverable name="Portfolio PDF" id="portfolio_pdf"> 
+  <!--<deliverable name="Portfolio PDF" id="portfolio_pdf"> 
     <context name="Portfolio" id="portfolio-pdf">
       <input href="portfolio.ditamap"/>
       <profile>
@@ -24,6 +29,6 @@
       <param name="args.chapter.layout" href="BASIC"/>
       <param name="args.outputfile.base" value="Technical Writing Portfolio"/>
     </publication>
-  </deliverable>
+  </deliverable>-->
   
 </project>

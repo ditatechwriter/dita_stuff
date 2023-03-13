@@ -3,7 +3,7 @@
 <topic id="intro">
     <title>Welcome</title>
     <body>
-        <image href="media/wookie1.jpg">
+        <image href="media/wookie1.jpg" scalefit="yes" outputclass="ms-md-5">
             <alt>Chewbacca and Michael McLoughlin</alt>
         </image>
         <p>I am Michael McLoughlin, a professional technical writer based in Belfast, N. Ireland
