@@ -8,7 +8,7 @@
         <ditaval href="excludeHTML.ditaval"/>
       </profile>
     </context>
-    <output href="."/>
+    <output href="out"/>
     <publication transtype="html5-bootstrap">
       <param name="nav-toc" value="collapsible"/>
       <param name="args.breadcrumbs" value="yes"/>
