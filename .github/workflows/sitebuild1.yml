@@ -21,7 +21,7 @@ jobs:
             apt-get install -qy --no-install-recommends nodejs
             nodejs -v
             dita install fox.jason.extend.css
-            dita install net.infotexture.dita-bootstrap
+            dita install https://github.com/ditatechwriter/tools/archive/dita_bootstrap.zip
             dita install https://github.com/jason-fox/fox.jason.prismjs/archive/master.zip
           build:  |
             dita --project=portfolio-proj.xml --theme=TestPDF-theme.yaml         
