@@ -36,17 +36,21 @@
             <tablelist/>
         </booklists>
     </frontmatter>
-    <chapter href="intro.dita" keys="intro" props="pdf">
+    <chapter href="intro.dita" keys="intro" deliveryTarget="pdf">
         <mapref href="ddac/Ddac.ditamap" format="ditamap"/>
         <mapref href="simple_DITA/simple-dita.ditamap" format="ditamap"/>
         <mapref href="pdf_themes/pdf_themes.ditamap" format="ditamap"/>
         <mapref href="project_files/project_files.ditamap" format="ditamap" keys="project-files"/>
         <mapref href="GA_builds/ga-builds.ditamap" format="ditamap"/>
+        <mapref href="search-site/dita-bootstrap-search.ditamap" format="ditamap"
+            keys="dita-bootstrap-search"/>
     </chapter>
-    <chapter href="ddac/Ddac.ditamap" format="ditamap" props="html"/>
-    <chapter href="simple_DITA/simple-dita.ditamap" format="ditamap" props="html"/>
-    <chapter href="pdf_themes/pdf_themes.ditamap" format="ditamap" props="html"/>
-    <chapter href="project_files/project_files.ditamap" format="ditamap" props="html"
+    <chapter href="ddac/Ddac.ditamap" format="ditamap" deliveryTarget="html"/>
+    <chapter href="simple_DITA/simple-dita.ditamap" format="ditamap" deliveryTarget="html"/>
+    <chapter href="pdf_themes/pdf_themes.ditamap" format="ditamap" deliveryTarget="html"/>
+    <chapter href="project_files/project_files.ditamap" format="ditamap" deliveryTarget="html"
         keys="project-files"/>
-    <chapter href="GA_builds/ga-builds.ditamap" format="ditamap" props="html"/>
+    <chapter href="GA_builds/ga-builds.ditamap" format="ditamap" deliveryTarget="html"/>
+    <chapter href="search-site/dita-bootstrap-search.ditamap" format="ditamap"
+        keys="dita-bootstrap-search" deliveryTarget="html"/>
 </bookmap>

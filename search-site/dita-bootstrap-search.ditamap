@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>Adding search to the DITA Bootstrap plugin</title>
+    <topicref href="add-search-bootstrap-plugin.dita" keys="dita-search">
+        <topicref href="pagefind-search-library.dita" keys="pagefind"/>
+    </topicref>
+</map>

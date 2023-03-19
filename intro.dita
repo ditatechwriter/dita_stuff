@@ -3,7 +3,7 @@
 <topic id="intro">
     <title>Welcome</title>
     <body>
-        <image href="media/wookie1.jpg" scalefit="yes" outputclass="ms-md-5">
+        <image href="media/wookie1.jpg" scalefit="yes" scale="75" outputclass="ms-md-5">
             <alt>Chewbacca and Michael McLoughlin</alt>
         </image>
         <p>I am Michael McLoughlin, a professional technical writer based in Belfast, N. Ireland
@@ -14,5 +14,20 @@
             prospective employers could peruse to get idea of my writing skills and the kind of
             things that interested me as a technical writer.</p>
         <p>Please feel free to look around.</p>
+        <section id="section_h2c_mcw_vwb">
+            <title>About this site</title>
+            <p>This is just some information for the curious on the tools used to construct this
+                site.</p>
+            <p>Most of the content is written in simplified sub-set of DITA 1.3 tags, except for the
+                MDITA section which is written, appropriately enough, in the Lightweight DITA
+                (LwDITA) 1.0 variant MDITA.</p>
+            <p>The site was build using the Infotexture <xref
+                    href="https://www.dita-ot.org/plugins#!net.infotexture.dita-bootstrap"
+                    format="html" scope="external">DITA-Bootstrap</xref> plugin to the <xref
+                    href="https://www.dita-ot.org/" format="html" scope="external">DITA Open
+                    Toolkit</xref> 4.0.2. The builds were run using GitHub Actions.</p>
+            <p>The embedded search uses the <xref href="https://pagefind.app/" format="html"
+                    scope="external">Pagefind</xref> static search library.</p>
+        </section>
     </body>
 </topic>
