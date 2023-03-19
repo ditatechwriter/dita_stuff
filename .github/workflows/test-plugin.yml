@@ -24,4 +24,6 @@ jobs:
             dita install https://github.com/ditatechwriter/tools/archive/dita_bootstrap.zip
             dita install https://github.com/jason-fox/fox.jason.prismjs/archive/master.zip
           build:  |
-            dita --project=portfolio-proj.xml 
+            dita --project=portfolio-proj.xml
+            cd out
+            npx pagefind --source .
