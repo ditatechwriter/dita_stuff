@@ -1,0 +1,27 @@
+name: site-build
+
+# Controls when the action will run. 
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+  
+jobs:
+  build-dita:
+    name: Build DITA
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v2
+      - name: Build HTML5
+        id: DITA-build
+        uses: dita-ot/dita-build-action@master
+        with:
+          install: |
+            apt-get update -q
+            apt-get install -qy --no-install-recommends nodejs
+            nodejs -v
+            dita install fox.jason.extend.css
+            dita install https://github.com/ditatechwriter/tools/archive/dita_bootstrap.zip
+            dita install https://github.com/jason-fox/fox.jason.prismjs/archive/master.zip
+          build:  |
+            dita --project=portfolio-proj.xml 
