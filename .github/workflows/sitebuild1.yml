@@ -30,7 +30,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: dita-artifact
-          path: ‘.’
+          path: ‘out’
       - name: Deploy 🚀
         id: deploy
         uses: JamesIves/github-pages-deploy-action@3.7.1
