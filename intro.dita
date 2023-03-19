@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="intro">
-    <title>Welcome</title>
+    <title>Hi!</title>
     <body>
         <image href="media/wookie1.jpg" scalefit="yes" scale="75" outputclass="ms-md-5">
             <alt>Chewbacca and Michael McLoughlin</alt>
