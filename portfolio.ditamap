@@ -36,6 +36,8 @@
             <tablelist/>
         </booklists>
     </frontmatter>
+    
+    <chapter href="index.html" format="html" scope="peer" deliveryTarget="pdf"><topicmeta><navtitle>Home</navtitle></topicmeta></chapter>
     <chapter href="intro.dita" keys="intro" deliveryTarget="pdf">
         <mapref href="ddac/Ddac.ditamap" format="ditamap"/>
         <mapref href="simple_DITA/simple-dita.ditamap" format="ditamap"/>

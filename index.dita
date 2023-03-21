@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="index">
+    <title outputclass="text-center">index</title>
+    <body>
+        <p outputclass="text-center">This is a test</p>
+        <bodydiv outputclass="row justify-content-center text-center">
+            <bodydiv outputclass="col">
+                <section outputclass="card w-100">
+                <title outputclass="h5">Card Title</title>
+                <p><xref href="intro.html" format="html" scope="peer">Some quick example text to
+                            build on the card title and make up the bulk of the card’s
+                            content.</xref></p>
+            </section>
+            </bodydiv>
+            <bodydiv outputclass="col">
+                <section outputclass="card w-100">
+                    <title outputclass="h5">Card Title</title>
+                    <p>Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                </section>
+            </bodydiv>
+            <bodydiv outputclass="col">
+                <section outputclass="card w-100">
+                    <title outputclass="h5">Card Title</title>
+                    <p>Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                </section>
+            </bodydiv>
+            <bodydiv outputclass="col">
+                <section outputclass="card w-100">
+                    <title outputclass="h5">Card Title</title>
+                    <p>Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                </section>
+            </bodydiv>
+        </bodydiv>
+        <bodydiv outputclass="row justify-content-center text-center">
+            <bodydiv outputclass="col">
+                <section outputclass="card w-100">
+                    <title outputclass="h5">Card Title</title>
+                    <p>Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                </section>
+            </bodydiv>
+            <bodydiv outputclass="col">
+                <section outputclass="card w-100">
+                    <title outputclass="h5">Card Title</title>
+                    <p>Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                </section>
+            </bodydiv>
+            <bodydiv outputclass="col">
+                <section outputclass="card w-100">
+                    <title outputclass="h5">Card Title</title>
+                    <p>Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                </section>
+            </bodydiv>
+        </bodydiv>
+    </body>
+</topic>

@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="https://www.dita-ot.org/project">
   
+  
+  <deliverable name="Index" id="index_html5"> 
+    <context name="Index" id="index-html5">
+      <input href="indexmap.ditamap"/>
+      <profile>
+        <ditaval href="excludeHTML.ditaval"/>
+      </profile>
+    </context>
+    <output href="."/>
+    <publication transtype="index-bootstrap">
+      <param name="nav-toc" value="none"/>
+      <param name="html5.toc.generate" value="no"/>
+      <!--<param name="args.breadcrumbs" value="yes"/>
+      <param name="args.hide.parent.link" value="yes"/>
+      <param name="args.rellinks" value="none"/>-->
+    </publication>
+  </deliverable>
+  
   <deliverable name="Portfolio" id="portfolio_html5"> 
     <context name="Portfolio" id="portfolio-html5">
       <input href="portfolio.ditamap"/>
@@ -14,7 +32,6 @@
       <param name="args.breadcrumbs" value="yes"/>
       <param name="args.hide.parent.link" value="yes"/>
       <param name="args.rellinks" value="none"/>
-      <!--<param name="args.ftr" href="bs-footer-example.xml"/>-->
     </publication>
   </deliverable>
   
@@ -34,5 +51,6 @@
       <param name="args.outputfile.base" value="Technical Writing Portfolio"/>
     </publication>
   </deliverable>-->
+  
   
 </project>
