@@ -46,10 +46,14 @@
         <section id="section_skb_fwx_twb" props="pdf">
             <p>The following videos from the 2022 DITA-OT Day conference explain about the feature's
                 raison d'être.</p>
-            <p><object width="560" height="315" data="https://youtu.be/iQHhp9vZCow"
-                    outputclass="iframe"/></p>
-            <p><object width="560" height="315" data="https://youtu.be/N602wR7qoNE"
-                    outputclass="iframe"/></p>
+            <p><object width="560" height="315" data="https://www.youtube.com/embed/iQHhp9vZCow"
+                    outputclass="iframe">
+                    <param name="allowfullscreen" value="true"/>
+                </object></p>
+            <p><object width="560" height="315" data="https://www.youtube.com/embed//N602wR7qoNE"
+                outputclass="iframe">
+                <param name="allowfullscreen" value="true"/>
+            </object></p>
         </section>
     </body>
 </topic>

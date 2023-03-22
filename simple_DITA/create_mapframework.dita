@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="create_mapframework">
-    <title>Creating the <tt translate="no">simple_ditamap</tt> framework</title>
+    <title>Creating the <codeph translate="no">simple_ditamap</codeph> framework</title>
     <body>
-        <p>Having created the topic framework <tt translate="no">simple_dita</tt>, the next task is
-            to create a map framework. For simplicity's sake, let's call it <tt translate="no"
-                >simple_ditamap</tt>.</p>
+        <p>Having created the topic framework <codeph translate="no">simple_dita</codeph>, the next
+            task is to create a map framework. For simplicity's sake, let's call it <codeph
+                translate="no">simple_ditamap</codeph>.</p>
         <ol>
             <li>
                 <p>If the <b>Preferences</b> dialog is not already open, go to
@@ -25,23 +25,25 @@
                     </li>
                     <li>
                         <p>Set <b>Storage</b> to <b>External</b>, and click the folder icon to
-                            navigate to the <tt translate="no">simple_ditamap</tt> folder within
-                            your <tt translate="no">customer_frameworks</tt> folder.</p>
-                    </li>
-                    <li>
-                        <p>On the <b>Classpath</b> tab, select the <tt translate="no"
-                                >${baseFramework}/resources</tt> row and click the wrench icon.</p>
-                        <p>Change the content in the <b>Directory</b> field to <tt translate="no"
-                                >${frameworkDir}/resources/</tt> and click <b>OK</b>. In this case,
-                            the <tt translate="no">${frameworkDir}</tt> variable contains the path
-                            to the <tt translate="no">custom_frameworks/simple_ditamap</tt>
+                            navigate to the <codeph translate="no">simple_ditamap</codeph> folder
+                            within your <codeph translate="no">customer_frameworks</codeph>
                             folder.</p>
                     </li>
                     <li>
+                        <p>On the <b>Classpath</b> tab, select the <codeph translate="no"
+                                >${baseFramework}/resources</codeph> row and click the wrench
+                            icon.</p>
+                        <p>Change the content in the <b>Directory</b> field to <codeph
+                                translate="no">${frameworkDir}/resources/</codeph> and click
+                                <b>OK</b>. In this case, the <codeph translate="no"
+                                >${frameworkDir}</codeph> variable contains the path to the <codeph
+                                translate="no">custom_frameworks/simple_ditamap</codeph> folder.</p>
+                    </li>
+                    <li>
                         <p>On the <b>Templates</b> tab, select all the rows and click the X icon to
-                            delete them all. Click the <b>+</b> icon, and enter <tt translate="no"
-                                >${frameworkDir}/templates/</tt> in the <b>Directory</b> field and
-                            click <b>OK</b>.</p>
+                            delete them all. Click the <b>+</b> icon, and enter <codeph
+                                translate="no">${frameworkDir}/templates/</codeph> in the
+                                <b>Directory</b> field and click <b>OK</b>.</p>
                     </li>
                     <li>
                         <p>On the Author tab, edit the <b>Menu</b>, <b>Contextual Menu</b>,

@@ -9,9 +9,9 @@
             topics, and one for DITA maps. These custom frameworks can then be shared with
             colleagues and imported into their Oxygen instances.</p>
         <p>The first step in defining the new frameworks is to set up the location from which they
-            will be shared. I created a GitHub repository call <tt translate="no">tools</tt> and
-            added the following directory structure:</p>
-        <codeblock translate="no">custom_frameworks
+            will be shared. I created a GitHub repository call <codeph translate="no">tools</codeph>
+            and added the following directory structure:</p>
+        <codeblock translate="no" outputclass="language-markup">custom_frameworks
             - simple_dita
                 - resources
                 - templates
@@ -24,17 +24,17 @@
                     frameworks.</p>
             </li>
             <li>
-                <p><b>simple_dita</b> - is the container for the <tt translate="no"
-                        >simple_ditamap.framework</tt> file.</p>
+                <p><b>simple_dita</b> - is the container for the <codeph translate="no"
+                        >simple_dita.framework</codeph> file.</p>
             </li>
             <li>
-                <p><b>simple_ditamap</b> - is the container for the <tt translate="no"
-                        >simple_ditamap.framework</tt> file.</p>
+                <p><b>simple_ditamap</b> - is the container for the <codeph translate="no"
+                        >simple_ditamap.framework</codeph> file.</p>
             </li>
             <li>
-                <p><b>/resources</b> - holds the <tt translate="no">cc_config.xml</tt> file. There
-                    are many other files that could live here such as CSS or Schematron files if
-                    required.</p>
+                <p><b>/resources</b> - holds the <codeph translate="no">cc_config.xml</codeph> file.
+                    There are many other files that could live here such as CSS or Schematron files
+                    if required.</p>
             </li>
             <li>
                 <p><b>/templates</b> - contains the topic or map templates.</p>
@@ -48,26 +48,28 @@
                 resource files:</p>
             <ol>
                 <li>
-                    <p>First move a copy of the <tt translate="no">cc_config.xml</tt> file you
-                        created in to the resources folder in within both the <tt translate="no"
-                            >simple_dita</tt> and <tt translate="no">simple_ditamap</tt>
-                        folders.</p>
+                    <p>First move a copy of the <codeph translate="no">cc_config.xml</codeph> file
+                        you created in to the resources folder in within both the <codeph
+                            translate="no">simple_dita</codeph> and <codeph translate="no"
+                            >simple_ditamap</codeph> folders.</p>
                     <note>In the example I cited in <xref keyref="cc_config"/>, both topic and map
-                        elements and attributes were configured. You could also create separate <tt
-                            translate="no">cc_config.xml</tt> files defining only the relevant
-                        elements and attributes for each framework.</note>
+                        elements and attributes were configured. You could also create separate
+                            <codeph translate="no">cc_config.xml</codeph> files defining only the
+                        relevant elements and attributes for each framework.</note>
                 </li>
                 <li>
-                    <p>Next, copy the <tt translate="no">Topic.dita</tt> and <tt translate="no"
-                            >Topic.properties</tt> files from <tt translate="no"
-                            >frameworks/dita/templates/topic</tt> folder within your Oxygen install
-                        folder to the <tt translate="no">simple_dita/templates</tt> folder.</p>
+                    <p>Next, copy the <codeph translate="no">Topic.dita</codeph> and <codeph
+                            translate="no">Topic.properties</codeph> files from <codeph
+                            translate="no">frameworks/dita/templates/topic</codeph> folder within
+                        your Oxygen install folder to the <codeph translate="no"
+                            >simple_dita/templates</codeph> folder.</p>
                 </li>
                 <li>
-                    <p>Finally, copy the <tt translate="no">Map.ditamap</tt> and <tt translate="no"
-                            >Map.properties</tt> files from <tt translate="no"
-                            >frameworks/dita/templates/map</tt> folder within your Oxygen install
-                        folder to the <tt translate="no">simple_dita/templates</tt> folder. </p>
+                    <p>Finally, copy the <codeph translate="no">Map.ditamap</codeph> and <codeph
+                            translate="no">Map.properties</codeph> files from <codeph translate="no"
+                            >frameworks/dita/templates/map</codeph> folder within your Oxygen
+                        install folder to the <codeph translate="no"
+                            >simple_ditamap/templates</codeph> folder. </p>
                 </li>
             </ol>
         </section>

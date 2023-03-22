@@ -2,15 +2,14 @@
 <!DOCTYPE topic
   PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="building-output-with-github-actions">
-    <title>DITA CICD with GitHub Actions</title>
+    <title>DITA CI/CD with GitHub Actions</title>
   <shortdesc>GitHub Actions are a quick and easy way to automate build outputs form DITA content
     stored in a GitHub repository. </shortdesc>
     <body>
-        <p>The following code is a simple GitHub Actions workflow builds HTML5 files from MDITA
-            content and deposits them in a branch called <i>published</i>. This build is kicked off
-            manually from GitHub but, as you can see in the code snippet below, you can also set it
-            start builds on push or on pull_requests to a certain branch. It is also possible to
-            configure a cron job to run the build at a specific time.</p>
+        <p>The following code is a simple GitHub Actions workflow that builds HTML5 files from DITA
+      content and deposits them in a branch called <i>published</i>. This build is kicked off  on
+      push or on pull_requests to a the <codeph>main</codeph> branch. It is also possible to
+      configure a cron job to run the build at a specific time, or to run the build manually.</p>
         <codeblock xml:space="preserve" outputclass="yaml">name: site-build
 
 # Controls when the action will run. 
@@ -51,32 +50,33 @@ jobs:
           BRANCH: published # The branch the action should deploy to.
           FOLDER: out # The folder the action should deploy.
           TARGET-FOLDER: docs          </codeblock>
-    <p>The <tt>jobs</tt> section of the workflow file spins up an Ubuntu Linux instance and then
-      runs a series of steps:</p>
+    <p>The <codeph>jobs</codeph> section of the workflow file spins up an Ubuntu Linux instance and
+      then runs a series of steps:</p>
     <ol>
       <li>
-        <p>The first step, <i>Git checkout</i>, is GitHub-provided action that checks out the
-          current branch.</p>
+        <p>The first step, <codeph>Git checkout</codeph>, is a GitHub-provided action that checks
+          out the current branch.</p>
       </li>
       <li>
-        <p>The real work is done by the next step, <i>Build HTML5</i>. It uses the
-            <i>dita-build-action</i> GitHub Action created by <xref keyref="jason-fox"/> which
-          downloads the latest version of the DITA Open Toolkit,  installs 3 required plugins from
-          the DITA-OT plugin registry, and runs the build instruction using the <i>myproject.xml</i>
-          project file stored in the branch. The <i>myproject.xml</i> project file contains all the
-          information on the source ditamap, output transtype, output folder, filter files, and any
-          build parameters. For more information on configuring project files, see <xref
-            keyref="project-files"/>.</p>
+        <p>The real work is done by the next step, <codeph>Build HTML5</codeph>. It uses the
+            <codeph>dita-build-action</codeph> GitHub Action created by <xref keyref="jason-fox"/>
+          which downloads the latest version of the DITA Open Toolkit, installs 3 required plugins
+          from the DITA-OT plugin registry, and runs the build instruction using the
+            <codeph>myproject.xml</codeph> project file stored in the branch. The
+            <codeph>myproject.xml</codeph> project file contains all the information on the source
+          ditamap, output transtype, output folder, filter files, and any build parameters. For more
+          information on configuring project files, see <xref keyref="project-files"/>.</p>
       </li>
       <li>
-        <p>The third step, <i>Upload DITA</i>, uploads the files outputted by the build to a folder
-          called <i>out</i>.</p>
+        <p>The third step, <codeph>Upload DITA</codeph>, uploads the files outputted by the build to
+          a folder called <codeph>out</codeph>.</p>
       </li>
       <li>
-        <p>The last step, <i>Deploy</i> uses a GitHub action written by <xref keyref="james-ives"/>
-          originally meant to deploy content to a GitHub Pages branch but used here to move to the
-            <i>docs</i> folder in the <i>published</i> branch. From there web hooks could be
-          employed to the content to a service like Netlify.</p>
+        <p>The last step, Deploy uses a GitHub action written by <xref keyref="james-ives"/>
+          originally meant to deploy content to a GitHub Pages branch but used here to move the
+          content of the <codeph>out</codeph> folder on the <codeph>main</codeph> branch to the
+            <codeph>docs</codeph> folder in the <codeph>published</codeph> branch. From there web
+          hooks could be employed to upload the content to a service like Netlify.</p>
       </li>
     </ol>
     <section id="section_sbd_ppc_5wb">

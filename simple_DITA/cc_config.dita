@@ -1,37 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="cc_config">
-    <title>Creating a <tt translate="no">cc_config.xml</tt> file</title>
+    <title>Creating a <codeph translate="no">cc_config.xml</codeph> file</title>
     <body>
-        <p>The Oxygen <tt translate="no">cc_config.xml</tt> file allows you define which DITA
-            elements and attributes are displayed in the Elements and Attributes windows in the
-            Oxygen UI.  By configuring element proposals in the <tt translate="no"
-                >cc_config.xml</tt> file, you can control which elements and attributes your users
-            can add to topics and maps.</p>
+        <p>The Oxygen <codeph translate="no">cc_config.xml</codeph> file allows you define which
+            DITA elements and attributes are displayed in the Elements and Attributes windows in the
+            Oxygen UI. By configuring element proposals in the <codeph translate="no"
+                >cc_config.xml</codeph> file, you can control which elements and attributes your
+            users can add to topics and maps.</p>
         <note>You are not writing a new DTD here, so a writer could technically manually type in any
             legal DITA element or attribute and the topic would still validate.</note>
-        <p>To create a new <tt translate="no">cc_config.xml</tt> file, you could copy and edit the
-            default file that lives in the <tt translate="no">[Oxygen install
-                folder]/frameworks/dita/resources</tt> folder. Alternatively you can create one from
-            scratch using a conveniently-provided template that you can open from
+        <p>To create a new <codeph translate="no">cc_config.xml</codeph> file, you could copy and
+            edit the default file that lives in the <codeph translate="no">[Oxygen install
+                folder]/frameworks/dita/resources</codeph> folder. Alternatively you can create one
+            from scratch using a conveniently-provided template that you can open from
                 <b>File</b>><b>New</b>><b>Framework templates</b>><b>Oxygen
                 extensions</b>><b>Content Completion Configuration</b>. </p>
         <p>The template contains some sample code (which you can adopt or delete). The Oxygen online
-            help provides fairly comprehensive information on how work with the <tt translate="no"
-                >cc_config.xml</tt> file.</p>
+            help provides fairly comprehensive information on how work with the <codeph
+                translate="no">cc_config.xml</codeph> file.</p>
         <p>For more information, see <xref keyref="customize_cc"/>.</p>
         <section id="section_jsz_cnb_twb">
             <title>A sample cc_config.xml file</title>
-            <p>I have created a sample <tt translate="no">cc_config.xml</tt> file based largely on
-                the Lightweight DITA 1.0 XDITA proposal for a reduced list of DITA elements. Of
-                course, your <tt translate="no">cc_config.xml</tt> file could contain any elements
-                and attributes you deem necessary. </p>
-            <p>In addition to restricting the available elements and attributes for users, this <tt
-                    translate="no">cc_config.xml</tt> file also defines child elements or mandatory
-                attributes and attribute values to be included (or omitted) for some elements. To
-                give one example, if you add a <tt translate="no">&lt;section></tt> element, Oxygen
-                will also add a <tt translate="no">&lt;title></tt> and <tt translate="no"
-                    >&lt;p></tt> child elements.</p>
+            <p>I have created a sample <codeph translate="no">cc_config.xml</codeph> file based
+                largely on the Lightweight DITA 1.0 XDITA proposal for a reduced list of DITA
+                elements. Of course, your <codeph translate="no">cc_config.xml</codeph> file could
+                contain any elements and attributes you deem necessary. </p>
+            <p>In addition to restricting the available elements and attributes for users, this
+                    <codeph translate="no">cc_config.xml</codeph> file also defines child elements
+                or mandatory attributes and attribute values to be included (or omitted) for some
+                elements. To give one example, if you add a <codeph translate="no"
+                    >&lt;section></codeph> element, Oxygen will also add a <codeph translate="no"
+                    >&lt;title></codeph> and <codeph translate="no">&lt;p></codeph> child
+                elements.</p>
         </section>
         <codeblock translate="no" outputclass="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?>
 &lt;!-- 
@@ -90,41 +91,6 @@
         &lt;/items>
     &lt;/match>
     
-    &lt;match attributeName="dir">
-        &lt;items action="addIfEmpty">
-            &lt;item value="ltr" annotation="right-to-left text"/>
-            &lt;item value="rtl" annotation="left-to-right text"/>
-            &lt;item value="lro" annotation="left-to-right override"/>
-            &lt;item value="rto" annotation="right-to-left override"/>
-        &lt;/items>
-    &lt;/match>
-    
-    &lt;!-- Contributes values for xml:lang attribute -->
-    &lt;match attributeName="lang">
-        &lt;items action="addIfEmpty">
-            &lt;item value="de" annotation="German"/>
-            &lt;item value="de-DE" annotation="German"/>
-            &lt;item value="en" annotation="English"/>
-            &lt;item value="en-US" annotation="English (US)"/>
-            &lt;item value="es" annotation="Spanish"/>
-            &lt;item value="fi" annotation="Finnish"/>
-            &lt;item value="fr" annotation="French"/>
-            &lt;item value="fr-FR" annotation="French"/>
-            &lt;item value="he" annotation="Hebrew"/>
-            &lt;item value="it" annotation="Italian"/>
-            &lt;item value="it-IT" annotation="Italian"/>
-            &lt;item value="ja" annotation="Japanese"/>
-            &lt;item value="ja-JP" annotation="Japanese"/>
-            &lt;item value="nl" annotation="Dutch"/>
-            &lt;item value="ro" annotation="Romanian"/>
-            &lt;item value="ru" annotation="Russian"/>
-            &lt;item value="sl" annotation="Slovenian"/>
-            &lt;item value="sv" annotation="Swedish"/>
-            &lt;item value="zh" annotation="Chinese"/>
-            &lt;item value="zh-CN" annotation="Chinese (simplified)"/>
-        &lt;/items>
-    &lt;/match>
-    
     &lt;match elementName="note" attributeName="type" editable="onlyAllowedItems">
         &lt;items action="replace">
             &lt;item value="note"/>
@@ -135,71 +101,7 @@
             &lt;item value="restriction"/>
             &lt;item value="other"/>
         &lt;/items>
-    &lt;/match>
-    
-    &lt;match attributeName="format">
-        &lt;items action="addIfEmpty">
-            &lt;item value="dita"/>
-            &lt;item value="ditamap"/>
-            &lt;item value="html"/>
-            &lt;item value="pdf"/>
-            &lt;item value="markdown"/>
-            &lt;item value="mdita"/>
-            &lt;item value="png"/>
-            &lt;item value="svg"/>
-            &lt;item value="gif"/>
-            &lt;item value="jpg"/>
-            &lt;item value="zip"/>
-        &lt;/items>
-    &lt;/match>
-    
-    &lt;match elementName="object" attributeName="type">
-        &lt;items action="addIfEmpty">
-            &lt;item value="video/mp4"/>
-            &lt;item value="video/ogg"/>
-            &lt;item value="audio/mpeg"/>
-            &lt;item value="audio/ogg"/>
-            &lt;item value="audio/wav"/>
-        &lt;/items>
-    &lt;/match>
-    
-    &lt;match elementName="pre" attributeName="outputclass">
-        &lt;items action="addIfEmpty">
-            &lt;item value="language-xml"
-                annotation="Provide content highlight in the DITA-OT XHTML and PDF outputs for XML."/>
-            &lt;item value="language-java"
-                annotation="Provide content highlight in the DITA-OT XHTML and PDF outputs for Java."/>
-            &lt;item value="language-css"
-                annotation="Provide content highlight in the DITA-OT XHTML and PDF outputs for CSS."/>
-            &lt;item value="language-javascript"
-                annotation="Provide content highlight in the DITA-OT XHTML and PDF outputs for JavaScript."/>
-            &lt;item value="language-json"
-                annotation="Provide content highlight in the DITA-OT XHTML and PDF outputs for JSON."/>
-            &lt;item value="language-sql"
-                annotation="Provide content highlight in the DITA-OT XHTML and PDF outputs for SQL."/>
-            &lt;item value="language-c"
-                annotation="Provide content highlight in the DITA-OT XHTML and PDF outputs for C."/>
-            &lt;item value="language-cpp"
-                annotation="Provide content highlight in the DITA-OT XHTML and PDF outputs for C++."/>
-            &lt;item value="language-csharp"
-                annotation="Provide content highlight in the DITA-OT XHTML and PDF outputs for C#."/>
-            &lt;item value="language-ini"
-                annotation="Provide content highlight in the DITA-OT XHTML and PDF outputs for ini scripts."/>
-            &lt;item value="language-python"
-                annotation="Provide content highlight in the DITA-OT XHTML and PDF outputs for Python."/>
-            &lt;item value="language-ruby"
-                annotation="Provide content highlight in the DITA-OT XHTML and PDF outputs for Ruby."/>
-            &lt;item value="language-perl"
-                annotation="Provide content highlight in the DITA-OT XHTML and PDF outputs for Perl."/>
-            &lt;item value="language-bourne"
-                annotation="Provide content highlight in the DITA-OT XHTML and PDF outputs for Bourne Shell."/>
-            &lt;item value="language-php"
-                annotation="Provide content highlight in the DITA-OT XHTML and PDF outputs for PHP."/>
-            &lt;item value="language-lua"
-                annotation="Provide content highlight in the DITA-OT XHTML and PDF outputs for Lua."
-            />
-        &lt;/items>
-    &lt;/match>
+    &lt;/match
     
 &lt;/config>
 </codeblock>

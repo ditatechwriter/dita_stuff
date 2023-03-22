@@ -41,12 +41,10 @@ jobs:
             dita --project=myproject.xml  
 ...</codeblock>
         </section>
-        <p>The above example also happens to install <tt>nodejs</tt> and <tt>apt-utils</tt> which
-            are dependencies of the <tt>net.infotexture.dita-bootstrap</tt> plugin.</p>
         <section id="section_mdc_kcd_5wb">
             <title>Installing custom plugins</title>
-            <p>Most companies that use DITA will have developed custom DITA-OT plugins at some
-                point. There are two ways to add a custom plugin: via a <xref
+            <p>Most companies that use DITA develop custom DITA-OT plugins at some point. There are
+                two ways to add a custom plugin: via a <xref
                     href="https://www.dita-ot.org/dev/topics/plugins-registry.html#plugin-registry__adding-custom-registries"
                     format="html" scope="external">custom registry</xref> or, the old-fashioned way,
                 via a plugin ZIP archive. The former method involves forking the DITA-OT plugin
@@ -57,7 +55,7 @@ jobs:
                 another repository is a lot easier.</p>
             <p>To do this, upload you custom plugin files unzipped to a dedicated branch in a GitHub
                 repository. GitHub zips the content in the background and you can install the ZIP
-                archive by passing it as a URL to the <tt>dita install</tt> command.</p>
+                archive by passing it as a URL to the <codeph>dita install</codeph> command.</p>
             <p>The following example installs a plugin from a user (myCompany) repository
                 (DITA-plugins) custom_pdf branch.</p>
             <codeblock outputclass="yaml">...

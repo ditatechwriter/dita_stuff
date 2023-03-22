@@ -7,7 +7,7 @@
         <p>The example shown in <xref keyref="project-file-structure"/> was for one document
       deliverable in one output format. But with project files you can include many different
       deliverables and even several different deliverables for the same ditamap. See the following
-      sample project file, <tt>gm_deliverables.xml</tt>:</p>
+      sample project file, <codeph>gm_deliverables.xml</codeph>:</p>
         <codeblock xml:space="preserve" outputclass="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;project xmlns="https://www.dita-ot.org/project"&gt;
 
@@ -61,9 +61,10 @@
         <p>The first part builds HTML5 output for the <i>Grunt Master 6000 Guide</i>.</p>
         <p>The second part builds HTML5 and PDF outputs for the <i>Grunt Master 3000 Guide</i> using
       two different filter files.</p>
-        <p>Notice in this section of the project file that the <tt>context</tt> is independent of the
-                <tt>deliverable</tt> sections, and that there are two <tt>deliverable</tt> sections that
-            both have their own &lt;context&gt; elements which reference the same <tt>context</tt> ID
-            via the <tt>idref</tt> attribute.</p>
+        <p>Notice in this section of the project file that the <codeph>context</codeph> is
+      independent of the <codeph>deliverable</codeph> sections, and that there are two
+        <codeph>deliverable</codeph> sections that both have their own &lt;context&gt; elements
+      which reference the same <codeph>context</codeph> ID via the <codeph>idref</codeph>
+      attribute.</p>
     </body>
 </topic>

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="add-search-bootstrap-plugin">
-    <title>Adding search to DITA Bootstrap plugin</title>
+    <title>Adding search to the DITA Bootstrap plugin</title>
     <body>
         <p>The <xref href="https://www.dita-ot.org/plugins#!net.infotexture.dita-bootstrap"
                 format="html" scope="external">DITA-Bootstrap</xref> plugin (or to give it its
             proper name, the <i>net.infotexture.dita-bootstrap</i> plugin) is a customized version
             of the DITA Open Toolkit (DITA-OT) HTML5 plugin that uses the Bootstrap 5 CSS framework.
             The DITA-OT HTML5 plugin produces unstyled HTML5 output. The DITA Bootstrap plugin look
-            and feel is based on Bootstrap 5 template documentation template.</p>
+            and feel is based on the Bootstrap 5 documentation template.</p>
         <p>You can install the plugin  into the DITA-OT via the <codeph>dita install</codeph>
             command:</p>
-        <codeblock>dita install net.infotexture.dita-bootstrap</codeblock>
+        <codeblock outputclass="language-markup">dita install net.infotexture.dita-bootstrap</codeblock>
         <p>I won't go into the many styling and configuration possibilities offered by the DITA
             Bootstrap plugin here. See the <xref
                 href="https://infotexture.github.io/dita-bootstrap/index.html" format="html"

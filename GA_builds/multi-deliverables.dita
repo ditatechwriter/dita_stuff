@@ -4,10 +4,9 @@
     <title>Building multiple deliverables in GitHub</title>
     <body>
         <p>The beauty of using <xref keyref="automating-builds/project-files"/> in your GitHub
-            builds is that a lot of the build information is already contained in the project file
-            itself. You can use one <tt>dita</tt> command to build not just multiple documents from
-            different ditamaps but also different output types for the same document, provided
-            that:</p>
+      builds is that a lot of the build information is already contained in the project file itself.
+      You can use one <codeph>dita</codeph> command to build not just multiple documents from
+      different ditamaps but also different output types for the same document, provided that:</p>
         <ol>
             <li>
                 <p>Your GitHub workflow file downloads all the required plugins for the output types

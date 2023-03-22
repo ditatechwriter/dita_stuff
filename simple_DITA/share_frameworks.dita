@@ -12,8 +12,8 @@
             </li>
             <li>
                 <p>To install custom editor layout in Oxygen, click <b>Window</b>><b>Load
-                        Layout</b>><b>Custom</b>, locate and select the <tt translate="no"
-                        >.layout</tt> file. Then, click <b>Open</b>.</p>
+                        Layout</b>><b>Custom</b>, locate and select the <codeph translate="no"
+                        >.layout</codeph> file. Then, click <b>Open</b>.</p>
                 <p>Your editor layout updates automatically.</p>
             </li>
             <li>
@@ -33,8 +33,8 @@
                     </image>
                 </fig>
                 <p>The Elements and Attributes windows should reflect the restricted choices created
-                    in the <tt translate="no">cc_config.xml</tt> file. If they don't, close and
-                    reopen Oxygen.</p>
+                    in the <codeph translate="no">cc_config.xml</codeph> file. If they don't, close
+                    and reopen Oxygen.</p>
             </li>
             <li>
                 <p>To check for the new templates, click <b>File</b>><b>New</b>. The <b>Choose a
