@@ -39,20 +39,20 @@
     
     <chapter href="index.html" format="html" scope="peer" deliveryTarget="pdf"><topicmeta><navtitle>Home</navtitle></topicmeta></chapter>
     <chapter href="intro.dita" keys="intro" deliveryTarget="pdf">
-        <mapref href="ddac/Ddac.ditamap" format="ditamap"/>
         <mapref href="simple_DITA/simple-dita.ditamap" format="ditamap"/>
-        <mapref href="pdf_themes/pdf_themes.ditamap" format="ditamap"/>
+        <mapref href="pdf_themes.ditamap" format="ditamap"/>
         <mapref href="project_files/project_files.ditamap" format="ditamap" keys="project-files"/>
-        <mapref href="GA_builds/ga-builds.ditamap" format="ditamap"/>
         <mapref href="search-site/dita-bootstrap-search.ditamap" format="ditamap"
             keys="dita-bootstrap-search"/>
     </chapter>
-    <chapter href="ddac/Ddac.ditamap" format="ditamap" deliveryTarget="html"/>
+    <chapter href="ga-builds.ditamap" format="ditamap"/>
+    <chapter href="Ddac.ditamap" format="ditamap"/>
+    <chapter href="Ddac.ditamap" format="ditamap" deliveryTarget="html"/>
     <chapter href="simple_DITA/simple-dita.ditamap" format="ditamap" deliveryTarget="html"/>
-    <chapter href="pdf_themes/pdf_themes.ditamap" format="ditamap" deliveryTarget="html"/>
+    <chapter href="pdf_themes.ditamap" format="ditamap" deliveryTarget="html"/>
     <chapter href="project_files/project_files.ditamap" format="ditamap" deliveryTarget="html"
         keys="project-files"/>
-    <chapter href="GA_builds/ga-builds.ditamap" format="ditamap" deliveryTarget="html"/>
+    <chapter href="ga-builds.ditamap" format="ditamap" deliveryTarget="html"/>
     <chapter href="search-site/dita-bootstrap-search.ditamap" format="ditamap"
         keys="dita-bootstrap-search" deliveryTarget="html"/>
 </bookmap>

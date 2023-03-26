@@ -12,11 +12,11 @@
             call it from the DITA build command, as in the example below:</p>
         <codeblock xml:space="preserve" outputclass="language-bourne">dita -i my_map.ditamap -o out/pdfs --format=pdf2 --filter=my_filter.ditaval --propertyfile=my_build.properties</codeblock>
         <p>This made for more concise shell scripts because the build parameters for most documents
-            were the same and you could call the same <tt>.properties</tt> file for most of your build
-            commands. However, if you required different parameters for a document, you needed a
-            different <tt>.properties</tt> file. Each <tt>.properties</tt> file could only list the
-            parameters for one output format, and you still needed to use a different DITA build
-            command in your script for every document you wanted to build.</p>
+            were the same and you could call the same <codeph>.properties</codeph> file for most of
+            your build commands. However, if you required different parameters for a document, you
+            needed a different <codeph>.properties</codeph> file. Each <codeph>.properties</codeph>
+            file could only list the parameters for one output format, and you still needed to use a
+            different DITA build command in your script for every document you wanted to build.</p>
         <section id="project-files">
             <title>Project files</title>
             <p>Finally with DITA-OT release 3.4 came project files. Project files allow you to put
@@ -26,8 +26,8 @@
             <p>Your DITA build command now looks something like this:</p>
             <codeblock xml:space="preserve" outputclass="language-bourne">dita --project=myproject.xml -v</codeblock>
             <p>
-                <note>The <tt>-v</tt> switch simply tells the DITA Open Toolkit to use verbose mode
-                    and run the log file in the command prompt window.</note>
+                <note>The <codeph>-v</codeph> switch simply tells the DITA Open Toolkit to use
+                    verbose mode and run the log file in the command prompt window.</note>
             </p>
             <p>The above example uses a project file in XML format. You can also write them in YAML
                 and JSON.</p>

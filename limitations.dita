@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="topic_gd2_ssq_twb">
+    <title>Limitations</title>
+    <body>
+        <p>As theme files are a relatively recent innovation from the team behind the DITA-OT, there
+            are limitations to what you can do with them. With new releases of the toolkit, there
+            may well be further functionality added but theme files will likely not replace all the
+            functionality you can achieve by building a custom PDF plugin. There are several reasons
+            for this:</p>
+        <ul>
+            <li>
+                <p>Theme files only interact with the XSL attributes files in the PDF2 plugin. They
+                    do not change anything in the XSLT templates. This means advanced configuration
+                    of  PDFs (for example adding bookmap variables to a cover page) is not
+                    possible.</p>
+            </li>
+            <li>
+                <p>There are also not insignificant financial reasons for not developing theme files
+                    beyond a certain point. Many supporters of the DITA-OT are DITA consultants who
+                    make a living out of writing custom PDF and other DITA-OT plugins, and they
+                    would not be happy if there was tool that allowed customers to do it for
+                    themselves.</p>
+                <p>Similarly, some of the DITA-OT's sponsors are software houses that sell tools for
+                    producing PDF output from DITA (such as Syncrosoft's <xref
+                        href="https://www.oxygenxml.com/styles_basket.html" format="html"
+                        scope="external">Oxygen Styles Basket</xref>, or Antenna House's <xref
+                        href="https://www.antennahouse.com/dita" format="html" scope="external"
+                        >PDF5-ML</xref> plugin). Any open source tool that seriously rivalled their
+                    proprietary offerings could ultimately affect the DITA-OT project's funding. Of
+                    course that does not mean that an independent developer could not develop such
+                    an open source tool based on theme files.</p>
+            </li>
+        </ul>
+        <section id="section_udk_nxp_twb">
+            <title>So what can't you do with theme files?</title>
+            <p>Having created several PDF templates now using theme files, here are some limitations
+                that I found:</p>
+            <ul>
+                <li>
+                    <p><b>Front covers</b> - Other than <codeph translate="no">&lt;title></codeph>,
+                            <codeph translate="no">&lt;booktitle></codeph> and <codeph
+                            translate="no">&lt;booktitlealt></codeph> (if you are using a bookmap)
+                        there are no other variables you put on the front page. I also was not able
+                        to find a way to style the <codeph translate="no">&lt;booktitlealt></codeph>
+                        to provide subtitle content - which means I had to omit it.</p>
+                </li>
+                <li>
+                    <p><b>Back covers</b> - There is currently no way to add a back cover to your
+                        PDF document.</p>
+                </li>
+                <li>
+                    <p><b>Footers</b> - Configuration of footer content is very limited. You can add
+                        page numbers and even some text, but all footer content must be styled the
+                        same way. So if your page number is right-aligned and bold, so will any text
+                        be that you put in there. Basically, footers in theme files are good for
+                        page numbers, and anything else, like copyright text, would be better placed
+                        elsewhere in your document.</p>
+                </li>
+                <li>
+                    <p><b>Tables</b> - I could find no way to style table cell borders or
+                        content.</p>
+                </li>
+                <li>
+                    <p><b>Heading levels</b> - You can only style headings as far as H4. H5 and H6
+                        headings are styled in the output but there is no way change this currently.
+                        Although you can style <codeph translate="no">&lt;example></codeph> and
+                            <codeph translate="no">&lt;section></codeph> titles.</p>
+                </li>
+                <li>
+                    <p><b>Lists</b> - List item markers (numbers or bullets) cannot be styled.</p>
+                    <p>Embedded lists (lists within lists) are not styled differently from their
+                        parent. An embedded numbered list will be styled 1, 2, 3, etc. rather than
+                        a, b, c, or i, ii, iii for example. Embedded unordered lists use the same
+                        bullet style as their parent list.</p>
+                </li>
+            </ul>
+            <p>Despite all of the above, the theme file feature is in active development, and the
+                DITA-OT developer Jarno Elovirta has said he would continue to add new features in
+                upcoming releases. Hopefully some of the issues outlined above will be addressed in
+                release 4.1.</p>
+        </section>
+    </body>
+</topic>

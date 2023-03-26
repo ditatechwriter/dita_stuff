@@ -32,6 +32,11 @@
       <param name="args.breadcrumbs" value="yes"/>
       <param name="args.hide.parent.link" value="yes"/>
       <param name="args.rellinks" value="none"/>
+      <param name="menubar-toc.include" value="yes"/>
+      <param name="args.css" value="custom.css"/>
+      <param name="args.copycss" value="yes"/>
+      <param name="args.csspath" value="css"/>
+      <param name="args.cssroot" value="css"/>
     </publication>
   </deliverable>
   
