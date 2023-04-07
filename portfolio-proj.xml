@@ -9,15 +9,15 @@
         <ditaval href="excludeHTML.ditaval"/>
       </profile>
     </context>
-    <output href="."/>
+    <!--<output href="."/>
     <publication transtype="index-bootstrap">
       <param name="nav-toc" value="none"/>
       <param name="html5.toc.generate" value="no"/>
-      <!--<param name="args.breadcrumbs" value="yes"/>
+      <!-\-<param name="args.breadcrumbs" value="yes"/>
       <param name="args.hide.parent.link" value="yes"/>
-      <param name="args.rellinks" value="none"/>-->
+      <param name="args.rellinks" value="none"/>-\->
     </publication>
-  </deliverable>
+  </deliverable>-->
   
   <deliverable name="Portfolio" id="portfolio_html5"> 
     <context name="Portfolio" id="portfolio-html5">
