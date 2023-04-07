@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+    <title>DITA Tech Writer</title>
+    <topicref href="intro.dita" keys="intro" toc="no"/>
+    <topicref href="ga-builds.ditamap" format="ditamap"/>
+    <topicref href="Ddac.ditamap" format="ditamap"/>
+    <topicref href="simple-dita.ditamap" format="ditamap"/>
+    <topicref href="pdf_themes.ditamap" format="ditamap"/>
+    <topicref href="project_files.ditamap" format="ditamap"
+        keys="project-files"/>
+    <topicref href="dita-bootstrap-search.ditamap" format="ditamap"
+        keys="dita-bootstrap-search"/>
+</map>

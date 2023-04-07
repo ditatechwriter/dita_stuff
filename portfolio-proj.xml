@@ -2,7 +2,7 @@
 <project xmlns="https://www.dita-ot.org/project">
   
   
-  <!--<deliverable name="Index" id="index_html5"> 
+  <deliverable name="Index" id="index_html5"> 
     <context name="Index" id="index-html5">
       <input href="indexmap.ditamap"/>
       <profile>
@@ -13,15 +13,15 @@
     <publication transtype="index-bootstrap">
       <param name="nav-toc" value="none"/>
       <param name="html5.toc.generate" value="no"/>
-      <!-\-<param name="args.breadcrumbs" value="yes"/>
+      <!--<param name="args.breadcrumbs" value="yes"/>
       <param name="args.hide.parent.link" value="yes"/>
-      <param name="args.rellinks" value="none"/>-\->
+      <param name="args.rellinks" value="none"/>-->
     </publication>
-  </deliverable>-->
+  </deliverable>
   
   <deliverable name="Portfolio" id="portfolio_html5"> 
     <context name="Portfolio" id="portfolio-html5">
-      <input href="portfolio.ditamap"/>
+      <input href="portfolio-site.ditamap"/>
       <profile>
         <ditaval href="excludeHTML.ditaval"/>
       </profile>

@@ -2988,7 +2988,7 @@ fieldset:disabled .btn {
 
 .nav-link:hover,
 .nav-link:focus {
-  color: #06537f;
+  color: /*#06537f*/;
 }
 
 .nav-link.disabled {
@@ -3043,7 +3043,7 @@ fieldset:disabled .btn {
 
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-  color: #fff;
+  color: #175465/*#fff*/;
   background-color: #07689f;
 }
 

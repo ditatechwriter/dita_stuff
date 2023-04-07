@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="simplifying-dita">
+    <title>Simplifying DITA</title>
+    <body>
+        <p>One of the issues that teams that use DITA often have is finding writers with DITA
+            skills. The base implementation of DITA has roughly 190 elements and many more
+            attributes. The most popular DITA XML editor, Oxygen XML Author, is an extremely
+            powerful but not infrequently daunting tool for new users. The learning curve therefore
+            can be steep for new writers, and the cost of hiring experienced DITA writers
+            expensive.</p>
+        <p>So, is it possible to simplify DITA and Oxygen to make them more user friendly for new
+            writers?</p>
+        <p>At the time of writing (Spring 2023), there is no news on when exactly the new
+            Lightweight DITA 1.0 (LwDITA) standard will be released. From what I've seen it will be
+            a great step forward in simplifying DITA and easing the fairly steep learning curve
+            encountered by many writers when taking on DITA for the first time.</p>
+        <p>However, in the meantime, what do we do?</p>
+        <p>Even though there is growing editor support for the new LwDITA DTDs and functionality,
+            it's not quite there yet.</p>
+        <p>And even when it comes online, LwDITA might be just too lightweight for your needs. I
+            have worked with document sets that contained many complex tables and which were
+            published to PDF. LwDITA only supports simple (as opposed to CALS) tables and does not
+            support bookmaps at all. In a case like this, LwDITA would not be powerful enough.</p>
+        <p>I think it is possible to simplify standard DITA 1.3 use for ordinary - especially new -
+            writers, without having to write whole new DTDs.</p>
+        <p>Here's how:</p>
+        <ul>
+            <li>
+                <p><b>Stop worrying about Information Typing</b></p>
+                <p>For many projects, the information type makes no difference in how the content is
+                    managed. You can forget about whether a topic is really a task, a reference, or
+                    a concept. Just use the <i>topic</i> type for all topics. This is essentially
+                    the approach in LwDITA.</p>
+                <p>This might have some DITA purists clutching their pearls over the very idea of
+                    using an ordered list for procedures instead of steps but, in the end, you can't
+                    tell in the output, and you'll save someone from learning all those task
+                    elements.</p>
+            </li>
+            <li>
+                <p><b>Stick to the <tt>&lt;map></tt> ditamap type wherever possible</b></p>
+                <p>Again, this is the approach taken by the team creating LwDITA. Admittedly,
+                    jettisoning bookmaps may not be feasible if you are required to publish PDF
+                    outputs.</p>
+            </li>
+            <li>
+                <p><b>Radically reduce available elements you use</b></p>
+                <p>Full-fat DITA 1.3 has something like 193 elements in its base implementation
+                    alone. The vast majority of which most writers don't use. I suggest auditing
+                    your content and looking at the type of elements and attributes you use and make
+                    a point of restricting access for writers to all the rest.</p>
+            </li>
+            <li>
+                <p><b>Simplify the Oxygen XML Author UI</b></p>
+                <p>Oxygen XML Editor/Author is my favorite software application. It is unbelievably
+                    powerful, very well-designed, and no other editor comes even close when working
+                    with DITA. And it can be a bit daunting for first-time users. Luckily, its UI is
+                    very extensible, and there are many things you can do to hide a lot of the more
+                    complex functionality that most writers, especially relatively inexperience
+                    ones, simply don't use on a regular basis.</p>
+                <p>Here are somethings you can do to make the Oxygen Editor more user friendly:</p>
+                <ul>
+                    <li>
+                        <p>Edit the <tt>cc_config.xml</tt> file so that only the elements (and
+                            attributes) you actually use are available in the <b>Elements</b> and
+                                <b>Attributes</b> windows. Editing this file also hides the unwanted
+                            elements and attributes in the right-click content completion menus.</p>
+                        <p>You can also use the <tt>cc_config.xml</tt> file to enforce element
+                            patterns (for example always having a <tt>&lt;p></tt> element inside a
+                                <tt>&lt;li></tt> element).</p>
+                    </li>
+                    <li>
+                        <p>Create a shareable custom frameworks for topics and maps that novice
+                            OxygenXML users can install allow them work with the reduced list of
+                            elements and attributes.</p>
+                    </li>
+                    <li>Define a simple editor layout with only the windows that are necessary, and
+                        share this with new team members. This is a big help for new users.</li>
+                </ul>
+            </li>
+        </ul>
+    </body>
+</topic>

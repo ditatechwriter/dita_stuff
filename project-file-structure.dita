@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic
+  PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="dita-ot-project-file-structure">
+    <title>DITA-OT project file structure</title>
+    <body>
+        <p>A DITA project file is an XML file containing build parameters for one or more documents
+            that you can pass to the <codeph>dita</codeph> build command.</p>
+        <p>The following is a sample project file in XML format:</p>
+        <codeblock xml:space="preserve" outputclass="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;project xmlns="https://www.dita-ot.org/project"&gt;
+  
+  &lt;deliverable name="Grunt Master 6000 Guide" id="ug_gruntmaster6000_html5"&gt; 
+    &lt;context name="Grunt Master 6000 Guide" id="ug_gruntmaster6000"&gt;
+        &lt;input href="ug_gruntmaster6000.ditamap"/&gt;
+        &lt;profile&gt;
+            &lt;ditaval href="GM6000.ditaval"/&gt;
+        &lt;/profile&gt;
+    &lt;/context&gt;
+    &lt;output href="out"/&gt;
+    &lt;publication transtype="html5"&gt;
+        &lt;param name="args.css" href="../css/custom.css"/&gt;
+        &lt;param name="args.copycss" value="yes"/&gt;
+    &lt;/publication&gt;
+  &lt;/deliverable&gt;
+  
+&lt;/project&gt;</codeblock>
+        <table frame="all"><tgroup cols="2"><colspec colname="c1" colwidth="1.0*"/><colspec colname="c2" colwidth="4.84*"/>
+            <thead><row>
+                <entry>Element</entry>
+                <entry>Description</entry>
+            </row></thead><tbody>
+            <row>
+                <entry>project</entry>
+                <entry>The wrapper element for deliverables in the project file. It contains only
+                            one attribute <codeph>xmlns</codeph> which defines the XML namespace for
+                            the elements in the file.</entry>
+            </row>
+            <row>
+                <entry>deliverable</entry>
+                <entry>The wrapper element for all the deliverable parameters. Its attributes
+                    define the deliverable name and a unique ID for the deliverable.</entry>
+            </row>
+            <row>
+                <entry>context</entry>
+                <entry>This element wraps the elements that hold the input information (the source
+                    ditamap) and filters that are used by the build. <note>Context elements can be
+                        used independently of the deliverable elements and so can employ their own
+                        name and unique ID attributes.</note></entry>
+            </row>
+            <row>
+                <entry>input</entry>
+                <entry>This element contains the relative path to the input ditamap you want to use
+                            for the build within a <codeph>href</codeph> attribute.</entry>
+            </row>
+            <row>
+                <entry>profile </entry>
+                <entry>The &lt;profile&gt; element wraps one or more &lt;ditamap&gt;
+                    elements.</entry>
+            </row>
+            <row>
+                <entry>ditaval</entry>
+                <entry>This element contains the relative path to the any filter file you want to
+                            use for the build within a <codeph>href</codeph> attribute. There can
+                            multiple &lt;ditaval&gt; tags for each context.</entry>
+            </row>
+            <row>
+                <entry>output</entry>
+                <entry>This element contains the relative path to the output folder where you want
+                            the outputted content to be deposited within a <codeph>href</codeph>
+                            attribute.</entry>
+            </row>
+            <row>
+                <entry>publication</entry>
+                <entry>The &lt;publication&gt; element wraps parameter elements which content the
+                            build parameters to be fed to the DITA-OT. Importantly, it also must
+                            contain a <codeph>transtype</codeph> attribute that tells the DITA-OT
+                            which output format to transform the content into.</entry>
+            </row>
+            <row>
+                <entry>param</entry>
+                <entry>This element contains the actual build parameters that the DITA-OT will use
+                            when creating the output. Build generally differ according to the output
+                            you have defined in the &lt;publication&gt; element
+                                <codeph>transtype</codeph> attribute. For a full list of parameters
+                            by output format, see the <xref
+                                href="https://www.dita-ot.org/dev/parameters/parameters-pdf.html"
+                                format="html" scope="external">DITA-OT website</xref></entry>
+            </row>
+        </tbody></tgroup></table>
+        <p>Visit the DITA-OT website see examples of project files in JSON and YAML formats, and for
+            other information on <xref href="https://www.dita-ot.org/dev/topics/using-project-files.html" format="html" scope="external">using project files</xref>.</p>
+    </body>
+</topic>
