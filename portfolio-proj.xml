@@ -2,14 +2,14 @@
 <project xmlns="https://www.dita-ot.org/project">
   
   
-  <deliverable name="Index" id="index_html5"> 
+  <!--<deliverable name="Index" id="index_html5"> 
     <context name="Index" id="index-html5">
       <input href="indexmap.ditamap"/>
       <profile>
         <ditaval href="excludeHTML.ditaval"/>
       </profile>
     </context>
-    <!--<output href="."/>
+    <output href="."/>
     <publication transtype="index-bootstrap">
       <param name="nav-toc" value="none"/>
       <param name="html5.toc.generate" value="no"/>
