@@ -15,6 +15,7 @@ exceptions:
   - CSS
   - CSV
   - DEBUG
+  - DITA
   - DOM
   - DPI
   - FAQ
@@ -58,6 +59,7 @@ exceptions:
   - URL
   - USB
   - UTF
+  - XHTML
   - XML
   - XSS
   - YAML

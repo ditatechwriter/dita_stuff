@@ -6,3 +6,6 @@ Vale
 Venafi
 MDITA
 Visual Studio Code
+Pandoc
+Asciidoc
+asciidoc
