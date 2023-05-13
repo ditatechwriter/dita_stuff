@@ -16,7 +16,7 @@ author: Michael
 Frontmatter refer to the contttnt in YAML format that can be placed at the start of an MDITA file.
 This content is essentially metadata that is useful when converting to other formats. 
 This content, for example, is passed to the META tags in the HEAD of an HTML file. 
-The content is also useful is the markdown file is ever converted to standard DITA XML.
+The content is also useful is the markdown fie is ever converted to standard DITA XML.
 
 ...
 ```
