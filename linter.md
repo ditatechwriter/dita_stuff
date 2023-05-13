@@ -2,7 +2,7 @@
 
 1. Install Vale.
 
-    === Mac
+    === "Mac"
 
     ```console
     # If you have Homebrew installed:
@@ -10,7 +10,7 @@
     brew install vale
     ```
 
-    === Linux
+    === "Linux"
 
     ```console
     # If you use apt-get:
@@ -18,7 +18,7 @@
     sudo apt-get install vale
     ```
 
-    === Windows
+    === "Windows"
 
     ```console
     # If you have Chocolatey installed:
