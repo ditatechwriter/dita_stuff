@@ -47,4 +47,5 @@
         keys="project-files"/>
     <chapter href="dita-bootstrap-search.ditamap" format="ditamap"
         keys="dita-bootstrap-search"/>
+    <chapter href="using-mkdocs.dita" keys="mkdocs"/>
 </bookmap>

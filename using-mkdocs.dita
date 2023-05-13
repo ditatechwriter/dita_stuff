@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="using-mkdocs">
+    <title>Using MkDocs</title>
+    <body>
+        <p><xref href="https://www.mkdocs.org/" format="html" scope="external">MkDocs</xref> is
+            Python-based static site generator that converts Markdown to HTML and was written with
+            technical documentation site particularly in mind. It also plays quite nicely with the
+            markdown content produced by the DITA Open Toolkit LwDITA plugin.</p>
+        <p>MkDocs has many impressive built-in features (like lunr-based search) and a range of
+            plugins and themes. The steps below explain how to install and configure MkDocs to
+            publish DITA content.</p>
+        <section>
+            <title>Publishing DITA content with MkDocs</title>
+            <p>Getting good looking HTML-based output from DITA content is not always easy. Oxygen's
+                built-in <i>Webhelp Responsive</i> plugin is eminently configurable and produces
+                some lovely looking output but comes with a $3000 US price tag (at time of writing)
+                if you want to run it from the command line. Infotexture's open source <xref
+                    href="https://infotexture.github.io/dita-bootstrap/" format="html"
+                    scope="external"><i>DITA Bootstrap</i></xref> plugin is cheaper but requires
+                reasonable knowledge of <xref format="html" scope="external"
+                    href="https://getbootstrap.com/docs/5.0/getting-started/introduction/"
+                        ><i>Bootstrap 5</i></xref> to configure it. It's also missing important
+                features like a built-in search (which can be difficult to implement).</p>
+            <p>If you haven't got the cash to do nightly builds of your content using <i>Webhelp
+                    Responsive</i>, or the time or energy to learn Bootstrap, MkDocs comes with a
+                relatively shallow learning curve and can be used to produce impressive looking
+                documentation in a few minutes.</p>
+        </section>
+        <section id="section_bvg_llc_kxb">
+            <title>Installing Python, MkDocs, and its dependencies</title>
+            <p>MkDocs is a Python package, so you will need to have both Python and its packet
+                manager <codeph>pip</codeph> installed.</p>
+            <ol>
+                <li outputclass="console">Check if you have Python3 already
+                        installed:<codeblock outputclass="console">python3 --version</codeblock><p>If
+                        you get <i>command not found</i>, you'll need to install
+                            it.</p><p>Follow<xref href="https://python.land/installing-python"
+                            format="html" scope="external">these instructions for installing
+                            Python</xref> for your operating system. </p></li>
+                <li><codeph>pip</codeph> is usually installed automatically when you install Python,
+                    you can test that by issuing the following
+                        command:<codeblock outputclass="console">pip3 --version</codeblock><p>Again,
+                        if you get <i>command not found</i>, you'll need to install it. Follow<xref
+                            href="https://pip.pypa.io/en/stable/installation/" format="html"
+                            scope="external">these instructions for installing pip</xref> for your
+                        operating system.</p></li>
+                <li>Once you have Python and pip up and running, you can proceed to install
+                        MkDocs:<codeblock outputclass="console">pip3 install mkdocs</codeblock><p>This
+                        command installs the basic MkDocs page with the default themes and features.
+                        Use the <codeph>mkdocs --version</codeph> command to check that it has
+                        installed properly.</p><note type="tip">If the <codeph>mkdocs
+                            --version</codeph> does not work, use <codeph>python3 -m mkdocs
+                            --version</codeph>.</note><p> The <xref format="html" scope="external"
+                            href="https://squidfunk.github.io/mkdocs-material/getting-started/"
+                            >Material for MkDocs</xref> theme is easily configurable theme for
+                        MkDocs that has many plugins and extensions. To install it, use the
+                        following
+                        command:</p><codeblock outputclass="console">pip3 install mkdocs-material</codeblock><p>Finally,
+                        in order to make configuration of your new site's documentation navigation
+                        easier, install the <xref scope="external" format="html"
+                            href="https://github.com/oprypin/mkdocs-literate-nav"
+                            >mkdocs-literate-nav</xref> plugin for
+                    MkDocs:</p><codeblock outputclass="console">pip3 install mkdocs-literate-nav</codeblock></li>
+            </ol>
+        </section>
+        <section id="section_ohd_jqc_kxb">
+            <title>Converting DITA to GitHub-flavored Markdown</title>
+            <p>MkDocs consumes Markdown files so before it can display your DITA content, you need
+                to convert it to GitHub-flavored Markdown using the LwDITA plugin that comes with
+                the DITA-OT 2.4 or later. See the information on the <xref scope="external"
+                    format="html" href="https://github.com/jelovirt/org.lwdita">LwDITA plugin</xref>
+                GitHub page for the build command to use with your version of the DITA-OT. For the
+                most recent release, use:</p>
+            <codeblock outputclass="console">dita -i my-map.ditamap -o docs --format=markdown_github</codeblock>
+            <p>MkDocs automatically looks for content in the <codeph>docs</codeph> folder but you
+                can call the output folder whatever you want and use the MkDocs configuration file
+                to point to it. You can also add any further build parameters you need to the
+                    <codeph>dita</codeph> command (or use a <xref keyref="project-file-structure"
+                    >project file</xref>).</p>
+        </section>
+        <section id="section_h5l_4sc_kxb">
+            <title>Configuring MkDocs</title>
+            <p>MkDocs can be configured mostly by using a single configuration file:
+                    <codeph>mkdocs.yml</codeph>. This file must be added to the folder that contains
+                the <codeph>docs</codeph> folder.</p>
+            <p>A basic <codeph>mkdocs.yml</codeph>:</p>
+            <codeblock outputclass="yaml">site_name: My site name
+
+theme:
+  name: material
+
+plugins:
+  - search
+  - literate-nav:
+      nav_file: index.md</codeblock>
+            <ul>
+                <li><codeph>site_name</codeph> - the name of the site that will appear in the site
+                    header</li>
+                <li><codeph>theme</codeph> - the name of the MkDocs theme - in this case it is set
+                    to the Material for MkDocs theme installed earlier.</li>
+                <li><codeph>plugins</codeph> - the lunr search plugin that indexes the site content,
+                    and the <i>mkdocs-literate-nav</i> plugin that uses the
+                        <codeph>index.md</codeph> file produced by the LwDITA transform to create
+                    the site navigation correctly.</li>
+            </ul>
+            <p>You will almost certainly want to configure more features in the
+                    <codeph>mkdocs.yml</codeph> file. It's worth your time to go through the <xref
+                    format="html" scope="external"
+                    href="https://squidfunk.github.io/mkdocs-material/getting-started/">Material for
+                    MkDocs</xref> site (as well as the <xref
+                    href="https://github.com/mkdocs/best-of-mkdocs" format="html" scope="external"
+                    >Best of MkDocs</xref> GitHub repository) to see the range of configuration
+                options available. </p>
+        </section>
+        <section id="section_bsj_fvc_kxb">
+            <title>Viewing and building the site</title>
+            <p>Once you have transformed your DITA content to Markdown, and configured the
+                    <codeph>mkdocs.yml</codeph> file, you are ready to test and build the site using
+                MkDocs.</p>
+            <ol>
+                <li>Open a terminal at the folder containing your <codeph>mkdocs.yml</codeph> file,
+                    and issue the <codeph>mkdocs serve</codeph> command. This MkDocs built-in HTTP
+                    service that serves your content at <codeph>127.0.0.1:8000</codeph>. Open a
+                    browser at that address to your converted content in MkDocs.</li>
+                <li>You can make changes to the <codeph>mkdocs.yml</codeph> file (and the markdown
+                    content - although it is recommended you do that in DITA and rebuild) and the
+                    MkDocs server will display them immediately.</li>
+                <li>When you are finished, use <codeph>Ctrl+c</codeph> to stop the MkDocs HTTP
+                    service, and then issue the <codeph>mkdocs build</codeph> command. This command
+                    builds the site to a <codeph>site</codeph> folder. The site folder and/or its
+                    contents can then be uploaded to a web server.</li>
+            </ol>
+        </section>
+    </body>
+</topic>
