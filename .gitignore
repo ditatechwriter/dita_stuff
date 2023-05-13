@@ -1,9 +1,7 @@
 
 .DS_Store
 ddac/.DS_Store
-ddac/.DS_Store
-ddac/.DS_Store
-ddac/.DS_Store
-ddac/.DS_Store
-ddac/.DS_Store
-ddac/.DS_Store
+
+# Vale
+.github/styles  # required if the repo uses GitHub Actions
+.vale.ini       # optional
