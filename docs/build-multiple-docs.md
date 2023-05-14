@@ -1,5 +1,5 @@
 ---
-author: [Michael McLoughlin, Michael McLoughlin]
+author: Michael McLoughlin
 publisherinformation: V1.0
 ---
 

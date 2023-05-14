@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
-<map>
-    <title>DITA-OT GitHub Actions</title>
-    <topicref href="GA-build.dita" keys="ga-builds"><topicmeta><navtitle>DITA CI/CD</navtitle></topicmeta>
-        <topicref href="cfg-dita-ot-action.dita" keys="cfg-dita-ot-action"/>
-        <topicref href="multi-deliverables.dita" keys="multi-deliverables"/>
-    </topicref>
-</map>

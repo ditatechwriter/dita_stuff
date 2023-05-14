@@ -7,7 +7,7 @@ publisherinformation: V1.0
 
 If you have saved the layout and custom framework files to GitHub repository, or shared location on your network, installing them is very straightforward:
 
-1.  First, clone the repository \(or open the network location\), where the files have been saved.
+1.  First, clone the repository (or open the network location), where the files have been saved.
 
 2.  To install custom editor layout in Oxygen, click **Window**\>**Load Layout**\>**Custom**, locate and select the `.layout` file. Then, click **Open**.
 

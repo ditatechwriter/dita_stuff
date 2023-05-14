@@ -1,10 +1,9 @@
 ---
-site_name: DITA tech writer
+site_name: Technical writing samples
 theme:
   name: material
   features:
-    - navigation.tabs
-    - navigation.sections
+    #- navigation.sections
     - toc.integrate
     - navigation.top
     - search.suggest
@@ -12,6 +11,7 @@ theme:
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
+    - content.code.select
   language: en
   palette:
     - scheme: default
@@ -41,6 +41,8 @@ extra:
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - admonition
@@ -48,10 +50,12 @@ markdown_extensions:
       generic: true
   - footnotes
   - pymdownx.details
-  - pymdownx.superfences
   - pymdownx.mark
   - attr_list
   - md_in_html
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
 
 copyright: |
   &copy; 2023 <a href="https://github.com/ditatechwriter"  target="_blank" rel="noopener">Some guy</a>

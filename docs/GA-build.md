@@ -7,7 +7,7 @@ publisherinformation: V1.0
 
 GitHub Actions are a quick and easy way to automate build outputs form DITA content stored in a GitHub repository.
 
-The following code is a simple GitHub Actions workflow that builds HTML5 files from DITA content and deposits them in a branch called *published*. This build is kicked off on push or on pull\_requests to a the `main` branch. It is also possible to configure a cron job to run the build at a specific time, or to run the build manually.
+The following code is a simple GitHub Actions workflow that builds HTML5 files from DITA content and deposits them in a branch called *published*. This build is kicked off on push or on pull requests to a the `main` branch. it's also possible to configure a cron job to run the build at a specific time, or to run the build manually.
 
 ```yaml
 name: site-build
@@ -56,7 +56,7 @@ The `jobs` section of the workflow file spins up an Ubuntu Linux instance and th
 
 1.  The first step, `Git checkout`, is a GitHub-provided action that checks out the current branch.
 
-2.  The real work is done by the next step, `Build HTML5`. It uses the `dita-build-action` GitHub Action created by [Jason Fox](https://github.com/jason-fox/dita-build-action) which downloads the latest version of the DITA Open Toolkit, installs 3 required plugins from the DITA-OT plugin registry, and runs the build instruction using the `myproject.xml` project file stored in the branch. The `myproject.xml` project file contains all the information on the source ditamap, output transtype, output folder, filter files, and any build parameters. For more information on configuring project files, see [project\_files.ditamap](project_files.ditamap).
+2.  The real work is done by the next step, `Build HTML5`. It uses the `dita-build-action` GitHub Action created by [Jason Fox](https://github.com/jason-fox/dita-build-action) which downloads the latest version of the DITA Open Toolkit, installs 3 required plugins from the DITA-OT plugin registry, and runs the build instruction using the `myproject.xml` project file stored in the branch. The `myproject.xml` project file contains all the information on the source ditamap, output transtype, output folder, filter files, and any build parameters. For more information on configuring project files, see .
 
 3.  The third step, `Upload DITA`, uploads the files outputted by the build to a folder called `out`.
 
@@ -65,7 +65,7 @@ The `jobs` section of the workflow file spins up an Ubuntu Linux instance and th
 
 ## Manual builds
 
-The example above runs when a content is pushed to the `main` branch. When you are testing builds, it's easier to run builds manually. Adding the `workflow_dispatch` event trigger to your workflow file allows you to build manually by clicking **Run workflow** on the **Actions** tab in the GitHub UI.
+The example above runs when you push content to the `main` branch. When you are testing builds, it's easier to run builds manually. Adding the `workflow_dispatch` event trigger to your workflow file allows you to build manually by clicking **Run workflow** on the **Actions** tab in the GitHub UI.
 
 ```yaml
 name: site-build
@@ -91,11 +91,6 @@ on:
 
 ...
 ```
+!!! tip
 
-**Note:** For help with cron notation, [https://crontab.guru/](https://crontab.guru/) is useful resource.
-
--   **[Configuring the dita-ot-action](cfg-dita-ot-action.md)**  
-
--   **[Building multiple deliverables in GitHub](multi-deliverables.md)**  
-
-
+    For help with cron notation, [https://crontab.guru/](https://crontab.guru/) is useful resource.

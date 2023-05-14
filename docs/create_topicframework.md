@@ -9,7 +9,7 @@ Having told Oxygen where to find the frameworks and their associated files, you 
 
 For more information on creating custom frameworks in Oxygen, see [OxygenXML Help: Create Custom Frameworks](https://www.oxygenxml.com/doc/versions/25.0/ug-editor/topics/author-devel-guide-intro.html?hl=creating%2Cconfiguring%2Ccustom%2Cframeworks).
 
-1.  If the **Preferences** dialog is not already open, go to **Options**\>**Preferences**\>**Document Type Association**.
+1.  If the **Preferences** dialog isn't already open, go to **Options**>**Preferences**>**Document Type Association**.
 
 2.  Click **DITA** and then **Extend**.
 
@@ -34,7 +34,6 @@ For more information on creating custom frameworks in Oxygen, see [OxygenXML Hel
 
 Once completed, your Elements and Attributes windows in Oxygen look like the examples below:
 
-|![Oxygen Elements window](media/elements.png)|![Oxygen Attributes window](media/attrs.png)|
+| ![Oxygen Elements window](media/elements.png) | ![Oxygen Attributes window](media/attrs.png) |
 
-**Parent topic:**[Simplifying DITA](simplifying-dita.md)
 

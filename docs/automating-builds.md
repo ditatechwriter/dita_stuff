@@ -1,5 +1,5 @@
 ---
-author: [Michael McLoughlin, Michael McLoughlin]
+author: Michael McLoughlin
 publisherinformation: V1.0
 ---
 
@@ -17,7 +17,7 @@ This made for more concise shell scripts because the build parameters for most d
 
 ## Project files
 
-Finally with DITA-OT release 3.4 came project files. Project files allow you to put all the build parameters \(including input files, output folders, output formats, and filters\) all in the same file for multiple documents. You can even define multiple outputs with different parameters for the same document.
+Finally with DITA-OT release 3.4 came project files. Project files allow you to put all the build parameters (including input files, output folders, output formats, and filters) all in the same file for multiple documents. You can even define multiple outputs with different parameters for the same document.
 
 Your DITA build command now looks something like this:
 

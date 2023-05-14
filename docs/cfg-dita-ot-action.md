@@ -5,13 +5,13 @@ publisherinformation: V1.0
 
 # Configuring the dita-ot-action
 
-There are several ways to configure the *dita-ot-action* GitHub Action. The [DITA-OT website](https://www.dita-ot.org/dev/topics/using-github-actions.html) contains detailed instructions and several sample workflow files are provided in the `docsrc/samples/github-actions` folder within the DITA-OT install folder, and on the [DITA-OT docs GitHub repository](https://github.com/dita-ot/docs/tree/develop/samples/github-actions).
+There are several ways to configure the *dita-ot-action* GitHub Action. The [DITA-OT website](https://www.dita-ot.org/dev/topics/using-github-actions.html) has detailed instructions and the `docsrc/samples/github-actions` folder (within the DITA-OT install folder) has several sample workflow files, and on the [DITA-OT docs GitHub repository](https://github.com/dita-ot/docs/tree/develop/samples/github-actions).
 
-The use of [Project files](automating-builds.md#project-files) is the simplest course of action when building using the *dita-ot-action* because a lot of the configuration is in the project file itself and does not have to be added to the workflow YAML file.
+The use of [Project files](automating-builds.md#project-files) is the simplest course of action when building using the *dita-ot-action* because a lot of the configuration is in the project file itself and doesn't have to be added to the workflow YAML file.
 
 ## Installing community plugins
 
-There are a limited number of very basic plugins included with the DITA-OT. However, other community developed plugins are available via the [DITA-OT plugin registry](https://www.dita-ot.org/plugins). These can be installed most easily using the `dita install` command as in the following excerpt:
+There are a limited number of basic plugins included with the DITA-OT. However, other community developed plugins are available in the [DITA-OT plugin registry](https://www.dita-ot.org/plugins). These can be installed using the `dita install` command as in the following excerpt:
 
 ```yaml
 ...
@@ -42,7 +42,7 @@ Most companies that use DITA develop custom DITA-OT plugins at some point. There
 
 To do this, upload you custom plugin files unzipped to a dedicated branch in a GitHub repository. GitHub zips the content in the background and you can install the ZIP archive by passing it as a URL to the `dita install` command.
 
-The following example installs a plugin from a user \(myCompany\) repository \(DITA-plugins\) custom\_pdf branch.
+The following example installs a plugin from a user (myCompany) repository (DITA-plugins) custom\_pdf branch.
 
 ```yaml
 ...

@@ -1,15 +1,10 @@
----
-author: Michael McLoughlin
-publisherinformation: V1.0
----
-
 # Using content references with MDITA
 
-For content that appears in several locations in document, DITA writers use the content referencing \(*conref*\) mechanism. Again, this is functionality that heretofore was simply not possible with Markdown on its own. Some static site generators such as Jekyll permitted the use of *includes* but each include had to be a separate HTML file. *Conrefs* allow to put all referenced content in one place.
+For content that appears in several locations in document, DITA writers use the content referencing (*conref*) mechanism. Again, this is functionality that was impossible with Markdown on its own. Some static site generators, such as Jekyll, permitted the use of *includes* but each include had to be a separate HTML file. You can use a *conref* file (also sometimes called a *warehouse* file) to put all referenced content in one place.
 
-Best practice for using conrefs involves placing the content to be reused in a separate "warehouse" file which does not itself appear in the final output.
+The bst practice for using conrefs involves placing the content you want to reuse in a separate *warehouse* file which doesn't itself appear in the final output.
 
-A MDITA Markdown topic can be used for a warehouse file but the content to be referenced must be in HDITA tags. The Markdown warehouse topic must include a YAML header with an idea \(as in the example below.
+You can use a MDITA Markdown topic as a warehouse file but the content you want to reference must be in HDITA tags. The Markdown warehouse topic must include a YAML header with an idea (as in the example below).
 
 A sample MDITA conref warehouse topic:
 
@@ -28,7 +23,7 @@ id: conref-content
  
 ```
 
-To reference the shared content within an MDITA markdown file, an HDITA tag must be used along with the *data-conref* attribute. The value for the *data-conref* attribute uses the following format <TOPIC FILE NAME\>\#<TOPIC ID\>/<TAG ID\>. For example:
+To reference the shared content within an MDITA Markdown file, you must use an HDITA tag must along with the *data-conref* attribute. The value for the *data-conref* attribute uses the following format `<TOPIC FILE NAME>#<TOPIC ID>/<TAG ID>`. For example:
 
 ```xml
 ## Installing the Grunt Master 6000 companion app
@@ -42,13 +37,10 @@ Follow the instructions below to install the Grunt Master 6000 companion app:
 <p data-conref="conref.md#conref-content/disclaimer"></p>
 ```
 
-Once built the HDITA tag will be replaced by the referenced text.
+The build process replaces HDITA tag with the referenced text.
 
 As in the above example, it's a good idea to add a comment that points reviewers towards the conref source in case they might want to review that content too.
 
 ## Keys in conref text
 
-Because conref content is HTML not Markdown you cannot use references to any keys you have defined in the ditamap. For example is you used *\[company\_name\]* in a the conref snippet, it would be rendered literally as "*\[company\_name\]*" and not "Grunt Industries". Therefore, as general rule, you should try to avoid where possible using content that you have also made into text variables in conref content.
-
-**Parent topic:**[New functionality for Markdown](extended-markdown.md)
-
+Because conref content is HTML not Markdown you can't use references to any keys you have defined in the ditamap. For example if you used *[company_name]* in a the conref snippet, the build process renders literally as "*[company_name]*" and not *Grunt Industries*"*. Therefore, as a general rule, try to avoid using content that you have also made into text variables in conref content.

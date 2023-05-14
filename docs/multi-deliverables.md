@@ -12,7 +12,7 @@ The beauty of using [Project files](automating-builds.md#project-files) in your 
 2.  Your project file includes all the transtype information you need to define the output formats.
 
 
-The following project file defines three deliverables for the *Grunt Master 3000 Guide*: a HTML5 website, a PDF version build with a custom PDF plugin, and another PDF version that uses the basic PDF2 plugin and which requires a theme file \(for more information, see [PDF2 theme files](pdf2_themes.md)\). Because of conflicting ditaval filter files, there are 2 different contexts for the *Grunt Master 3000 Guide* - one for each output format.
+The following project file defines three deliverables for the *Grunt Master 3000 Guide*: a HTML5 website, a PDF version built with a custom PDF plugin, and another PDF version that uses the basic PDF2 plugin and which requires a theme file (for more information, see [PDF2 theme files](pdf2_themes.md)). Because of conflicting ditaval filter files, there are 2 different contexts for the *Grunt Master 3000 Guide* - one for each output format.
 
 ```language-xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -92,7 +92,6 @@ jobs:
 ...
 ```
 
-**Note:** The first 3 plugins are used for the HTML5 build. The last for the custom PDF build. There is no need to install the PDF2 plugin as it is currently bundled with each DITA Open Toolkit release. The theme file is required for the PDF2 build. If not included, the output will revert to the default PDF2 styles. The theme file parameter is ignored by the other deliverable builds.
+!!! note
 
-**Parent topic:**[DITA CI/CD with GitHub Actions](GA-build.md)
-
+    The  HTML5 build uses the first 3 plugins. The last for the custom PDF build. There is no need to install the PDF2 plugin as it's bundled with each DITA Open Toolkit release. The theme file is required for the PDF2 build. If not included, the output will revert to the default PDF2 styles. The theme file parameter is ignored by the other deliverable builds.

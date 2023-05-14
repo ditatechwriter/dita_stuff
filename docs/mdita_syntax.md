@@ -5,13 +5,13 @@ publisherinformation: V1.0
 
 # MDITA topic syntax
 
-The DITA Open Toolkit website provides a cheat-sheet for MDITA mark-up: [MDITA syntax reference](https://www.dita-ot.org/dev/topics/markdown-dita-syntax-reference.html). Here I've provided a brief résumé of the most commonly used syntax items.
+The DITA Open Toolkit website provides a cheat-sheet for MDITA mark-up: [MDITA syntax reference](https://www.dita-ot.org/dev/topics/markdown-dita-syntax-reference.html). What follows is a brief résumé of the most commonly used syntax items.
 
-MDITA is based on [CommonMark](https://commonmark.org/).
+MDITA uses on [CommonMark](https://commonmark.org/) as a basis.
 
 ## Headings
 
-As DITA assigns heading level by position in the map, it's not a good idea to have more than one heading generally in an MDITA topic. If you want to have sections in your MDITA topic, assign a level 2 heading and add the *.section* class value in curly brackets as in the following example:
+As DITA assigns heading level by position in the map, it's not a good idea to have more than one level one heading in an MDITA topic. If you want to have sections in your MDITA topic, assign a level 2 heading and add the *.section* class value in curly brackets as in the following example:
 
 ```xml
 # Topic title
@@ -19,15 +19,15 @@ As DITA assigns heading level by position in the map, it's not a good idea to ha
 ## Section title {.section}
 ```
 
-Do not include any level three or lower headings in a MDITA topic. You can only 1 level 1 heading in a topic but you can have as many level 2 sections as you like, although you **cannot** have sections within sections.
+Don't include any level three or lower headings in a MDITA topic. You can only 1 level 1 heading in a topic but you can have as many level 2 sections as you like, although you **must not** have sections within sections.
 
 If you a complex multi-level heading topic, break it up into smaller topics and assign the required heading levels in the map.
 
 ## Paragraphs
 
-Paragraphs are separated by 2 returns as in most flavors of Markdown
+Paragraphs are separated by 2 returns as in most flavors of Markdown.
 
-The first paragraph in an MDITA file is treated \(in traditional DITA terms\) as a *shortdesc* element by transform plugins.
+The first paragraph in an MDITA file is (in traditional DITA terms) a *shortdesc* element by transform plugins.
 
 ## Links
 
@@ -40,17 +40,17 @@ Links use the following format:
 [External](http://www.example.com/test.html)
 ```
 
-However if you are refering to a markdown file in the same document, and that file has a key defined for it in the ditamap, you can just refer to the key within square brackets. For example:
+However, if you are referring to a Markdown file in the same document, and that file has a key defined for it in the ditamap, you can just reference the key within square brackets. For example:
 
 ```xml
 For more information, see [using-maps].
 ```
 
-When the document is built the key is replaced by the title of the topic. The same applies for keys defined in an external links map. For more information, see [Using keys](MDITA-keys.md).
+When you build the document, the build process replaces key by the title of the topic. The same applies for keys defined in an external links map. For more information, see [Using keys](MDITA-keys.md).
 
 ## Images
 
-Images can be inline as well as on their own line and can be given titles and *alt* content.
+Images can be inline or on their own line and can use titles and *alt* content.
 
 ```xml
 An inline ![Alt](test.jpg).
@@ -69,7 +69,9 @@ The following inline elements are possible:
 *italic* or _italic_
 ```
 
-Note that strikethough \(as in GitHub-flavoured Markdown\) is not permitted. Underline, codephrase, subscript, and superscript can added by using the relevant HDITA tags with a HDITA snippet:
+!!! Note
+
+    Strikethough (as in GitHub-flavoured Markdown) is not permitted. Underline, codephrase, subscript, and superscript can added by using the relevant HDITA tags with a HDITA snippet:
 
 ```xml
 <p>This is an <u>underline</u>.</p>
@@ -79,7 +81,7 @@ Note that strikethough \(as in GitHub-flavoured Markdown\) is not permitted. Und
 
 ## Alerts
 
-There is no specific MDITA markup for Notes/Alerts/Callouts. Use the HDITA *<note\>* tag wrapped in a *<p\>* tag. Use the *type* attribute to define different types of alert. The options are given below:
+There is no specific MDITA markup for Notes/Alerts/Callouts. Use the HDITA *<note\>* tag wrapped in a *<p\>* tag. Use the *type* attribute to define different types of note. See the options below:
 
 ```xml
 <p><note>This is a note</note></p>
@@ -191,13 +193,15 @@ MDITA also incorporates [MultiMarkdown](https://fletcherpenney.net/multimarkdown
 |Content|*Long Cell*|
 |Content|**Cell**|Cell|
 
-Admittedly MDITA, like any flavor of Markdown, is weak when it comes to tables. Markdown tables must be short and simple or they become virtually impossible to read. Reviewing Markdown content that content long and/or complex tables is very difficult and defeats the purpose.
+Admittedly MDITA, like any flavor of Markdown, is weak when it comes to tables. Markdown tables must be short and simple or they become virtually impossible to read. Reviewing Markdown content that content long and/or complex tables is difficult and defeats the purpose.
 
-**Warning:** If you have a documentation that contains many tables then Markdown-based systems are probably less useful. A more robust system like standard DITA is more appropriate in that case.
+!!! warning
+
+    If you have a documentation that has many tables then Markdown-based systems are probably less useful. A more robust system like standard DITA is more appropriate in that case.
 
 ## Video
 
-Generally you cannot add videos to a Markdown file but by adding the HDITA HTML5 tags to the file you can access video:
+You can't add videos to a Markdown file but by adding the HDITA HTML5 tags to the file you can access video:
 
 ```xml
 Check out the video below for more information:
@@ -207,11 +211,8 @@ Check out the video below for more information:
 </video>    
 ```
 
-Note that you will need to provide an image to be displayed in place of the video for the user to access it.
+You need to use an image as poster in place of the video for the user to access it.
 
 ## Escaping special characters
 
-Special characters are escaped using a backslash.
-
-**Parent topic:**[Writing and Reviewing MDITA](write-review-MDITA.md)
-
+Escape special characters using a backslash.

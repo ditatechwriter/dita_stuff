@@ -9,3 +9,7 @@ Visual Studio Code
 Pandoc
 Asciidoc
 asciidoc
+Markdown
+conref
+PDFs
+bookmap
